@@ -259,10 +259,11 @@
 		53488E7E23941E0E00528141 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53488E7D23941E0E00528141 /* StoreKit.framework */; };
 		534B278623466CC700A9042E /* TintSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534B278523466CC700A9042E /* TintSettingsViewController.swift */; };
 		5355A24D238832B60043F852 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355A24C238832B60043F852 /* Marker.swift */; };
-		5355A24F238BFC030043F852 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5355A24E238BFC030043F852 /* SDWebImage */; settings = {ATTRIBUTES = (Required, ); }; };
-		5355A251238BFC030043F852 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5355A250238BFC030043F852 /* SDWebImageMapKit */; settings = {ATTRIBUTES = (Required, ); }; };
 		5355A274238D65020043F852 /* KeyboardSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355A273238D65020043F852 /* KeyboardSettingsViewController.swift */; };
 		5355A276238E8F260043F852 /* LoadMoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5355A275238E8F260043F852 /* LoadMoreCell.swift */; };
+		535F1BC3244B5BC700826BC8 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 535F1BC2244B5BC700826BC8 /* SDWebImage */; };
+		535F1BC5244B5BDC00826BC8 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 535F1BC4244B5BDC00826BC8 /* SDWebImageMapKit */; };
+		535F1BCC244B636F00826BC8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 535F1BCB244B636F00826BC8 /* Kingfisher */; };
 		53633DB8237AB2B300541F13 /* DarkModeSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633DB7237AB2B300541F13 /* DarkModeSettingsViewController.swift */; };
 		53633DC3237AD4F800541F13 /* CoreBarChartsDisplayConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633DBB237AD4F800541F13 /* CoreBarChartsDisplayConfig.swift */; };
 		53633DC4237AD4F800541F13 /* VCoreBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633DBC237AD4F800541F13 /* VCoreBarChart.swift */; };
@@ -272,7 +273,7 @@
 		53633DC8237AD4F800541F13 /* CoreChartOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633DC0237AD4F800541F13 /* CoreChartOrientation.swift */; };
 		53633DC9237AD4F800541F13 /* BarChartCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633DC1237AD4F800541F13 /* BarChartCore.swift */; };
 		53633DCA237AD4F800541F13 /* CoreChartViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53633DC2237AD4F800541F13 /* CoreChartViewDataSource.swift */; };
-		53733C0D2382B3E9006F260E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53733C0C2382B3E9006F260E /* NotificationCenter.framework */; };
+		53733C0D2382B3E9006F260E /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53733C0C2382B3E9006F260E /* NotificationCenter.framework */; platformFilter = ios; };
 		53733C102382B3E9006F260E /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53733C0F2382B3E9006F260E /* TodayViewController.swift */; };
 		53733C132382B3E9006F260E /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53733C112382B3E9006F260E /* MainInterface.storyboard */; };
 		53733C172382B3E9006F260E /* MastExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 53733C0B2382B3E9006F260E /* MastExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -619,8 +620,6 @@
 		5393595E23886B6400D77FD1 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393595D23886B6400D77FD1 /* WatchSessionManager.swift */; };
 		5393595F23886B7500D77FD1 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393595D23886B6400D77FD1 /* WatchSessionManager.swift */; };
 		5393596023886D6D00D77FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53449D3923293E3700A470E2 /* Assets.xcassets */; };
-		53935B00238969F600D77FD1 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 53935AFF238969F600D77FD1 /* SDWebImage */; };
-		53935B02238969F600D77FD1 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 53935B01238969F600D77FD1 /* SDWebImageMapKit */; };
 		53935B10238AF94C00D77FD1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53935B12238AF94C00D77FD1 /* Localizable.strings */; };
 		53955D7723746F0400522101 /* HashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53955D7623746F0400522101 /* HashtagViewController.swift */; };
 		53955D792374887700522101 /* BrowserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53955D782374887700522101 /* BrowserSettingsViewController.swift */; };
@@ -1867,9 +1866,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5355A24F238BFC030043F852 /* SDWebImage in Frameworks */,
-				5355A251238BFC030043F852 /* SDWebImageMapKit in Frameworks */,
+				535F1BC3244B5BC700826BC8 /* SDWebImage in Frameworks */,
 				6427A50145F216B989F00A74 /* Pods_Mast.framework in Frameworks */,
+				535F1BC5244B5BDC00826BC8 /* SDWebImageMapKit in Frameworks */,
 				53488E7E23941E0E00528141 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1878,8 +1877,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53935B00238969F600D77FD1 /* SDWebImage in Frameworks */,
-				53935B02238969F600D77FD1 /* SDWebImageMapKit in Frameworks */,
+				535F1BCC244B636F00826BC8 /* Kingfisher in Frameworks */,
 				53733C0D2382B3E9006F260E /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3591,8 +3589,8 @@
 			);
 			name = Mast;
 			packageProductDependencies = (
-				5355A24E238BFC030043F852 /* SDWebImage */,
-				5355A250238BFC030043F852 /* SDWebImageMapKit */,
+				535F1BC2244B5BC700826BC8 /* SDWebImage */,
+				535F1BC4244B5BDC00826BC8 /* SDWebImageMapKit */,
 			);
 			productName = Mast;
 			productReference = 53449D2D23293E3600A470E2 /* Mast.app */;
@@ -3612,8 +3610,7 @@
 			);
 			name = MastExtension;
 			packageProductDependencies = (
-				53935AFF238969F600D77FD1 /* SDWebImage */,
-				53935B01238969F600D77FD1 /* SDWebImageMapKit */,
+				535F1BCB244B636F00826BC8 /* Kingfisher */,
 			);
 			productName = MastExtension;
 			productReference = 53733C0B2382B3E9006F260E /* MastExtension.appex */;
@@ -3755,6 +3752,7 @@
 			mainGroup = 53449D2423293E3600A470E2;
 			packageReferences = (
 				53935AFA238969EA00D77FD1 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				535F1BCA244B636F00826BC8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 53449D2E23293E3600A470E2 /* Products */;
 			projectDirPath = "";
@@ -5000,15 +4998,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mast/Mast.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 1.0.62;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = Mast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -5039,15 +5037,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mast/Mast.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 1.0.62;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = Mast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -5075,7 +5073,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MastExtension/MastExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = MastExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -5084,11 +5082,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.MastExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -5099,7 +5097,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MastExtension/MastExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = MastExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -5108,11 +5106,11 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.MastExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -5123,7 +5121,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MastShare/MastShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = MastShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -5132,7 +5130,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.MastShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5146,7 +5144,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = MastShare/MastShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = MastShare/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -5155,7 +5153,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.MastShare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5169,11 +5167,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = MastStickers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.MastStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5186,11 +5184,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = MastStickers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.MastStickers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -5207,11 +5205,11 @@
 				CODE_SIGN_ENTITLEMENTS = MastWatch/MastWatch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				IBSC_MODULE = MastWatch_Extension;
 				INFOPLIST_FILE = MastWatch/Info.plist;
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5231,11 +5229,11 @@
 				CODE_SIGN_ENTITLEMENTS = MastWatch/MastWatch.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				IBSC_MODULE = MastWatch_Extension;
 				INFOPLIST_FILE = MastWatch/Info.plist;
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5255,7 +5253,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MastWatch Extension/MastWatch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = "MastWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5263,7 +5261,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.watchkitapp.watchkitextension12;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5285,7 +5283,7 @@
 				CODE_SIGN_ENTITLEMENTS = "MastWatch Extension/MastWatch Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
+				CURRENT_PROJECT_VERSION = 1.0.62;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = "MastWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -5293,7 +5291,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shi.Mast.watchkitapp.watchkitextension12;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -5311,8 +5309,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Mast Push/Mast Push.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 1.0.62;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = "Mast Push/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -5321,7 +5319,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shi.Mast.Mast-Push";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5337,8 +5335,8 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Mast Push/Mast Push.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.59;
-				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
+				CURRENT_PROJECT_VERSION = 1.0.62;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = R5WHJ77XXD;
 				INFOPLIST_FILE = "Mast Push/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -5347,7 +5345,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 2.2;
+				MARKETING_VERSION = 2.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.shi.Mast.Mast-Push";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -5436,6 +5434,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		535F1BCA244B636F00826BC8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		53935AFA238969EA00D77FD1 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
@@ -5447,25 +5453,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5355A24E238BFC030043F852 /* SDWebImage */ = {
+		535F1BC2244B5BC700826BC8 /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 53935AFA238969EA00D77FD1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
 		};
-		5355A250238BFC030043F852 /* SDWebImageMapKit */ = {
+		535F1BC4244B5BDC00826BC8 /* SDWebImageMapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 53935AFA238969EA00D77FD1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImageMapKit;
 		};
-		53935AFF238969F600D77FD1 /* SDWebImage */ = {
+		535F1BCB244B636F00826BC8 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 53935AFA238969EA00D77FD1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImage;
-		};
-		53935B01238969F600D77FD1 /* SDWebImageMapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 53935AFA238969EA00D77FD1 /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImageMapKit;
+			package = 535F1BCA244B636F00826BC8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-import SDWebImage
+import Kingfisher
 
 class MainFeedCell: UITableViewCell {
     
@@ -125,7 +125,7 @@ class MainFeedCell: UITableViewCell {
         self.timestamp.text = timeAgoSince(stat.reblog?.createdAt ?? stat.createdAt)
         
         guard let imageURL = URL(string: stat.reblog?.account.avatar ?? stat.account.avatar) else { return }
-        self.profile.sd_setImage(with: imageURL, completed: nil)
+        self.profile.kf.setImage(with: imageURL)
         self.profile.layer.masksToBounds = true
 //        if stat.reblog?.account.displayName == nil {
 //            self.profile2.alpha = 0
