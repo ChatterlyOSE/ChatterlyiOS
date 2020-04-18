@@ -1227,6 +1227,7 @@
 		5355A27A238E94EE0043F852 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/MainInterface.strings; sourceTree = "<group>"; };
 		5355A27B238E94EF0043F852 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Interface.strings; sourceTree = "<group>"; };
 		5355A27C238E94F20043F852 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		535F1BCD244B67DB00826BC8 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		53633DB7237AB2B300541F13 /* DarkModeSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkModeSettingsViewController.swift; sourceTree = "<group>"; };
 		53633DBB237AD4F800541F13 /* CoreBarChartsDisplayConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreBarChartsDisplayConfig.swift; sourceTree = "<group>"; };
 		53633DBC237AD4F800541F13 /* VCoreBarChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCoreBarChart.swift; sourceTree = "<group>"; };
@@ -3748,6 +3749,7 @@
 				"zh-Hans",
 				de,
 				pl,
+				fr,
 			);
 			mainGroup = 53449D2423293E3600A470E2;
 			packageReferences = (
@@ -4867,6 +4869,7 @@
 				5355A272238D636A0043F852 /* zh-Hans */,
 				5355A27C238E94F20043F852 /* de */,
 				53976429239FA334000B860B /* pl */,
+				535F1BCD244B67DB00826BC8 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
