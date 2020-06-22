@@ -28,7 +28,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         return false
     }
     var tableView = UITableView()
-    let firstSection = ["App Icon".localized, "App Tint".localized, "Dark Mode Tint".localized, "Push Notifications".localized, "App Haptics".localized]
+    let firstSection = ["App Icon".localized, "App Tint".localized, "Dark Mode Tint".localized, "App Haptics".localized]
     let firstSectionPad = ["App Icon".localized, "App Tint".localized, "Dark Mode Tint".localized, "Push Notifications".localized]
     let firstSectionMac = ["App Tint".localized, "Dark Mode Tint".localized]
     let secondSection = [" \("Hide Sensitive Content".localized)", " \("Upload Videos as GIFs".localized)", " \("Dim Notifications Text".localized)", " \("Default Visibility".localized)", "Default Keyboard".localized, " \("Default Browser".localized)", " \("Default Scan Mode".localized)", " \("Siri Shortcuts".localized)", " \("App Lock".localized)"]
@@ -232,8 +232,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             } else if indexPath.row == 2 {
                 cell.imageView?.image = UIImage(systemName: "moon.circle", withConfiguration: symbolConfig) ?? UIImage()
             } else if indexPath.row == 3 {
-                cell.imageView?.image = UIImage(systemName: "app.badge", withConfiguration: symbolConfig) ?? UIImage()
-            } else if indexPath.row == 4 {
                 cell.imageView?.image = UIImage(systemName: "bolt", withConfiguration: symbolConfig) ?? UIImage()
                 let switchView = UISwitch(frame: .zero)
                 
@@ -395,23 +393,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 self.navigationController?.pushViewController(vc, animated: true)
             }
             if indexPath.row == 2 {
-//                if GlobalStruct.iapPurchased {
-                    let vc = DarkModeSettingsViewController()
-                    self.navigationController?.pushViewController(vc, animated: true)
-//                } else {
-//                    let vc = IAPSettingsViewController()
-//                    self.navigationController?.pushViewController(vc, animated: true)
-//                }
+                let vc = DarkModeSettingsViewController()
+                self.navigationController?.pushViewController(vc, animated: true)
             }
-            if indexPath.row == 3 {
-//                if GlobalStruct.iapPurchased {
-                    let vc = NotificationsSettingsViewController()
-                    self.navigationController?.pushViewController(vc, animated: true)
-//                } else {
-//                    let vc = IAPSettingsViewController()
-//                    self.navigationController?.pushViewController(vc, animated: true)
-//                }
-            }
+//            if indexPath.row == 3 {
+//                let vc = NotificationsSettingsViewController()
+//                self.navigationController?.pushViewController(vc, animated: true)
+//            }
             #endif
         } else if indexPath.section == 2 {
             if indexPath.row == 3 {

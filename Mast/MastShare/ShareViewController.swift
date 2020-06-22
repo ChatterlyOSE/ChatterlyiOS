@@ -185,7 +185,7 @@ class ShareViewController: UIViewController, UITextViewDelegate, UINavigationBar
         
         for y in extensionContext!.inputItems {
             if let inputItem = y as? NSExtensionItem {
-                for x in inputItem.attachments! {
+                _ = inputItem.attachments!.map ({ x in
                     if x.hasItemConformingToTypeIdentifier(kUTTypeImage as String) {
                         x.loadItem(forTypeIdentifier: kUTTypeImage as String) { [unowned self] (imageData, error) in
                             DispatchQueue.main.async {
@@ -221,7 +221,7 @@ class ShareViewController: UIViewController, UITextViewDelegate, UINavigationBar
                             }
                         }
                     }
-                }
+                })
             }
         }
     }

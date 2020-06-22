@@ -456,16 +456,18 @@ class ThirdViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         var theUser = ""
         let ac = self.notificationsDirect[indexPath.row].accounts
-        for x in ac {
+        _ = ac.map ({ x in
             if x.acct == GlobalStruct.currentUser.acct {
                 
             } else {
                 theUser = x.username
             }
-        }
+        })
 
         let controller = DMViewController()
-        controller.mainStatus.append(self.notificationsDirect[indexPath.row].lastStatus!)
+        if let y = self.notificationsDirect[indexPath.row].lastStatus {
+            controller.mainStatus.append(y)
+        }
         controller.theUser = theUser
         self.navigationController?.pushViewController(controller, animated: true)
         

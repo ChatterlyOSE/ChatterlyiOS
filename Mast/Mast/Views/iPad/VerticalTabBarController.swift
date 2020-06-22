@@ -15,6 +15,22 @@ class VerticalTabBarController: UIViewController {
     var button2 = UIButton()
     var button3 = UIButton()
     
+    public var isSplitOrSlideOver: Bool {
+        let windows = UIApplication.shared.windows
+        for x in windows {
+            if let z = self.view.window {
+                if x == z {
+                    if x.frame.width == x.screen.bounds.width || x.frame.width == x.screen.bounds.height {
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
@@ -50,6 +66,84 @@ class VerticalTabBarController: UIViewController {
         self.button3.addTarget(self, action: #selector(self.settings), for: .touchUpInside)
         self.button3.accessibilityLabel = "Settings".localized
         self.view.addSubview(self.button3)
+        
+        var offset: Int = 0
+        var tag: Int = 0
+        for x in Account.getAccounts() {
+            let b1 = UIButton()
+            b1.frame = CGRect(x: 20, y: 30 + offset, width: 40, height: 40)
+            b1.backgroundColor = UIColor.systemBackground
+            b1.layer.cornerRadius = 20
+            guard let imageURL = URL(string: x.avatar) else { return }
+            b1.sd_setImage(with: imageURL, for: .normal, completed: nil)
+            b1.layer.masksToBounds = true
+            b1.tag = tag
+            b1.addTarget(self, action: #selector(self.profileTapped), for: .touchUpInside)
+            self.view.addSubview(b1)
+            offset += 60
+            tag += 1
+        }
+    }
+    
+    @objc func profileTapped(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "updateLayout1"), object: nil)
+            
+            let instances = InstanceData.getAllInstances()
+            if instances.isEmpty || Account.getAccounts().isEmpty {
+                
+            } else {
+                let curr = InstanceData.getCurrentInstance()
+                if curr?.clientID == instances[sender.tag].clientID {
+                    
+                } else {
+                    InstanceData.setCurrentInstance(instance: instances[sender.tag])
+                    GlobalStruct.client = Client(
+                        baseURL: "https://\(instances[sender.tag].returnedText)",
+                        accessToken: instances[sender.tag].accessToken
+                    )
+                    
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "fromSidebar"), object: nil)
+                    
+                    #if targetEnvironment(macCatalyst)
+                    let rootController = ColumnViewController()
+                    let nav0 = VerticalTabBarController()
+                    let nav1 = ScrollMainViewController()
+                    
+                    let nav01 = UINavigationController(rootViewController: FirstViewController())
+                    let nav02 = UINavigationController(rootViewController: SecondViewController())
+                    let nav03 = UINavigationController(rootViewController: ThirdViewController())
+                    let nav04 = UINavigationController(rootViewController: FourthViewController())
+                    let nav05 = UINavigationController(rootViewController: FifthViewController())
+                    nav1.viewControllers = [nav01, nav02, nav03, nav04, nav05]
+                    
+                    rootController.viewControllers = [nav0, nav1]
+                    UIApplication.shared.keyWindow?.rootViewController = rootController
+                    UIApplication.shared.keyWindow?.makeKeyAndVisible()
+                    #elseif !targetEnvironment(macCatalyst)
+                    if UIDevice.current.userInterfaceIdiom == .pad && self.isSplitOrSlideOver == false {
+                        let rootController = ColumnViewController()
+                        let nav0 = VerticalTabBarController()
+                        let nav1 = ScrollMainViewController()
+                        
+                        let nav01 = UINavigationController(rootViewController: FirstViewController())
+                        let nav02 = UINavigationController(rootViewController: SecondViewController())
+                        let nav03 = UINavigationController(rootViewController: ThirdViewController())
+                        let nav04 = UINavigationController(rootViewController: FourthViewController())
+                        let nav05 = UINavigationController(rootViewController: FifthViewController())
+                        nav1.viewControllers = [nav01, nav02, nav03, nav04, nav05]
+                        
+                        rootController.viewControllers = [nav0, nav1]
+                        UIApplication.shared.keyWindow?.rootViewController = rootController
+                        UIApplication.shared.keyWindow?.makeKeyAndVisible()
+                    } else {
+                        UIApplication.shared.keyWindow?.rootViewController = ViewController()
+                    }
+                    #endif
+                }
+            }
+            
+        }
     }
     
     override func viewDidLoad() {

@@ -244,7 +244,8 @@ class TootViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
         
         self.navigationController?.navigationBar.backgroundColor = GlobalStruct.baseDarkTint
         self.navigationController?.navigationBar.barTintColor = GlobalStruct.baseDarkTint
-        
+
+        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillChange), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.addEmoji), name: NSNotification.Name(rawValue: "addEmoji"), object: nil)
@@ -1755,6 +1756,14 @@ class TootViewController: UIViewController, UITextViewDelegate, UIImagePickerCon
             presenter.sourceRect = (self.x1.value(forKey: "view") as? UIView)?.bounds ?? self.view.bounds
         }
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func keyboardWillChange(notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height - (UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0) - 4
+            self.keyHeight = CGFloat(keyboardHeight)
+        }
     }
     
     @objc func keyboardWillShow(notification: Notification) {

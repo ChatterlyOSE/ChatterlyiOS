@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                             UserDefaults.standard.set(true, forKey: "pnlikes")
                             UserDefaults.standard.set(true, forKey: "pnboosts")
                             UserDefaults.standard.set(true, forKey: "pnfollows")
-                            UIApplication.shared.registerForRemoteNotifications()
+//                            UIApplication.shared.registerForRemoteNotifications()
                         }
                     }
                 case .failed, .purchasing, .deferred:

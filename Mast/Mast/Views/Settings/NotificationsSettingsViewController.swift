@@ -251,7 +251,7 @@ class NotificationsSettingsViewController: UIViewController, UITableViewDataSour
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options:[.badge, .alert, .sound]) { (granted, error) in
             DispatchQueue.main.async {
-                UIApplication.shared.registerForRemoteNotifications()
+//                UIApplication.shared.registerForRemoteNotifications()
             }
         }
     }

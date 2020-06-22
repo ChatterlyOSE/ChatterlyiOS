@@ -232,9 +232,9 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
             do {
                 let json = try JSONDecoder().decode(tagInstances.self, from: data ?? Data())
                 DispatchQueue.main.async {
-                    for x in json.instances {
+                    _ = json.instances.map ({ x in
                         self.altInstances.append(x.name)
-                    }
+                    })
                     self.altInstances.insert("social.nofftopia.com", at: 0)
                     self.altInstances.insert("mastodon.technology", at: 0)
                     self.altInstances.insert("mastodon.social", at: 0)

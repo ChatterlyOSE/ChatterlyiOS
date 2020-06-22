@@ -838,6 +838,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
                 cell.selectedBackgroundView = bgColorView
                 return cell
             } else {
+                if indexPath.row < self.notifications.count {
                 if self.notifications[indexPath.row].id == "loadmorehere" {
                     
                     let cell = tableView.dequeueReusableCell(withIdentifier: "LoadMoreCell", for: indexPath) as! LoadMoreCell
@@ -956,6 +957,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
                     cell.selectedBackgroundView = bgColorView
                     return cell
                 }
+                } else {
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "LoadMoreCell", for: indexPath) as! LoadMoreCell
+                    cell.backgroundColor = UIColor(named: "lighterBaseWhite")!
+                    let bgColorView = UIView()
+                    bgColorView.backgroundColor = UIColor.clear
+                    cell.selectedBackgroundView = bgColorView
+                    return cell
+                }
             }
         } else {
             if indexPath.section == 0 {
@@ -1048,7 +1057,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        for x in self.tableView.visibleCells {
+        _ = self.tableView.visibleCells.map ({ x in
             if let z = x as? LoadMoreCell {
                 if let indexPath = self.tableView.indexPath(for: z) {
                     let rectOfCellInTableView = self.tableView.rectForRow(at: indexPath)
@@ -1067,7 +1076,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
                     }
                 }
             }
-        }
+        })
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

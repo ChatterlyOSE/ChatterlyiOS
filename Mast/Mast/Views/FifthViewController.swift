@@ -304,7 +304,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
                 DispatchQueue.main.async {
                     if let z = stat.first {
                         self.pickedCurrentUser = z
-                        self.tableView.reloadSections(IndexSet([0]), with: .none)
+                        self.tableView.reloadData()
                         self.fetchMedia()
                         self.fetchUserData()
                         self.fetchLists()
@@ -332,7 +332,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
                 if let stat = (statuses.value) {
                     DispatchQueue.main.async {
                         self.profileStatusesImages = stat
-                        self.tableView.reloadSections(IndexSet([1]), with: .none)
+                        self.tableView.reloadData()
                     }
                 }
             }
@@ -768,7 +768,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func viewLinks() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        for x in GlobalStruct.currentUser.fields {
+        _ = GlobalStruct.currentUser.fields.map ({ x in
             let op1 = UIAlertAction(title: x.name, style: .default , handler:{ (UIAlertAction) in
                 if let ur = URL(string: x.value.stripHTML()) {
                     if UIApplication.shared.canOpenURL(ur) {
@@ -786,7 +786,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             op1.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             alert.addAction(op1)
-        }
+        })
         alert.addAction(UIAlertAction(title: "Dismiss".localized, style: .cancel , handler:{ (UIAlertAction) in
             
         }))
@@ -801,7 +801,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func viewLinks2() {
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        for x in self.pickedCurrentUser.fields {
+        _ = self.pickedCurrentUser.fields.map ({ x in
             let op1 = UIAlertAction(title: x.name, style: .default , handler:{ (UIAlertAction) in
                 if let ur = URL(string: x.value.stripHTML()) {
                     if UIApplication.shared.canOpenURL(ur) {
@@ -819,7 +819,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
             }
             op1.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             alert.addAction(op1)
-        }
+        })
         alert.addAction(UIAlertAction(title: "Dismiss".localized, style: .cancel , handler:{ (UIAlertAction) in
             
         }))
@@ -1532,22 +1532,20 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
             op11.setValue(UIImage(systemName: "plus")!, forKey: "image")
             op11.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
             alert.addAction(op11)
-            for x in GlobalStruct.allLists {
+            _ = GlobalStruct.allLists.map ({ x in
                 let op1 = UIAlertAction(title: x.title, style: .default , handler:{ (UIAlertAction) in
                     ViewController().showNotifBanner("Added to List".localized, subtitle: "@\(self.profileStatuses.first?.account.username ?? "")", style: BannerStyle.info)
                     let request = Lists.add(accountIDs: [self.pickedCurrentUser.id], toList: x.id)
                     GlobalStruct.client.run(request) { (statuses) in
-                        if let stat = (statuses.value) {
-                            DispatchQueue.main.async {
-                                
-                            }
+                        if let _ = (statuses.value) {
+                            
                         }
                     }
                 })
                 op1.setValue(UIImage(systemName: "list.bullet")!, forKey: "image")
                 op1.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
                 alert.addAction(op1)
-            }
+            })
             
             alert.addAction(UIAlertAction(title: "Dismiss".localized, style: .cancel , handler:{ (UIAlertAction) in
                 
@@ -1647,7 +1645,7 @@ class FifthViewController: UIViewController, UITableViewDataSource, UITableViewD
                         DispatchQueue.main.async {
                             self.refreshControl.endRefreshing()
                             self.profileStatuses = stat
-                            self.tableView.reloadSections(IndexSet([2]), with: .none)
+                            self.tableView.reloadData()
                         }
                     }
                 }

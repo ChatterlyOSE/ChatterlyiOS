@@ -167,7 +167,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
     
     @objc func scrollTop1() {
         if self.tableView.alpha == 1 && !self.statusesHome.isEmpty && self.tableView.hasRowAtIndexPath(indexPath: IndexPath(row: 0, section: 0) as NSIndexPath) {
-            self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+//            self.tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            self.tableView.setContentOffset(.zero, animated: true)
             UIView.animate(withDuration: 0.18, delay: 0, options: .curveEaseOut, animations: {
                 self.top1.alpha = 0
                 self.top1.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
@@ -175,7 +176,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
             }
         }
         if self.tableViewL.alpha == 1 && !self.statusesLocal.isEmpty && self.tableViewL.hasRowAtIndexPath(indexPath: IndexPath(row: 0, section: 0) as NSIndexPath) {
-            self.tableViewL.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+//            self.tableViewL.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            self.tableViewL.setContentOffset(.zero, animated: true)
             UIView.animate(withDuration: 0.18, delay: 0, options: .curveEaseOut, animations: {
                 self.top2.alpha = 0
                 self.top2.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
@@ -183,7 +185,8 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
             }
         }
         if self.tableViewF.alpha == 1 && !self.statusesFed.isEmpty && self.tableViewF.hasRowAtIndexPath(indexPath: IndexPath(row: 0, section: 0) as NSIndexPath) {
-            self.tableViewF.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+//            self.tableViewF.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
+            self.tableViewF.setContentOffset(.zero, animated: true)
             UIView.animate(withDuration: 0.18, delay: 0, options: .curveEaseOut, animations: {
                 self.top3.alpha = 0
                 self.top3.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
@@ -369,6 +372,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
         }
     }
     
+    var fromSide: Bool = false
+    @objc func fromSidebar() {
+        self.fromSide = true
+        self.initialFetches()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -387,6 +396,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
         NotificationCenter.default.addObserver(self, selector: #selector(self.notifChangeBG), name: NSNotification.Name(rawValue: "notifChangeBG"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.goToIDNoti), name: NSNotification.Name(rawValue: "gotoidnoti1"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.updateLayout1), name: NSNotification.Name(rawValue: "updateLayout1"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.fromSidebar), name: NSNotification.Name(rawValue: "fromSidebar"), object: nil)
         
         if UserDefaults.standard.object(forKey: "clientID") == nil {} else {
             GlobalStruct.clientID = UserDefaults.standard.object(forKey: "clientID") as! String
@@ -600,7 +610,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                     UserDefaults.standard.set(true, forKey: "pnlikes")
                     UserDefaults.standard.set(true, forKey: "pnboosts")
                     UserDefaults.standard.set(true, forKey: "pnfollows")
-                    UIApplication.shared.registerForRemoteNotifications()
+//                    UIApplication.shared.registerForRemoteNotifications()
                 }
             }
         }
@@ -668,18 +678,20 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
             }
         }
         
-//        let request = Timelines.home()
-//        GlobalStruct.client.run(request) { (statuses) in
-//            if let stat = (statuses.value) {
-//                DispatchQueue.main.async {
-//                    self.statusesHome = stat
-//                    self.tableView.reloadData()
-//                    self.statusesHomeTemp = stat
-//                }
-//            }
-//        }
-        
-        self.markersGet()
+        if self.fromSide {
+            let request = Timelines.home()
+            GlobalStruct.client.run(request) { (statuses) in
+                if let stat = (statuses.value) {
+                    DispatchQueue.main.async {
+                        self.statusesHome = stat
+                        self.tableView.reloadData()
+                        self.statusesHomeTemp = stat
+                    }
+                }
+            }
+        } else {
+            self.markersGet()
+        }
         
         let request2 = Timelines.public(local: true, range: .default)
         GlobalStruct.client.run(request2) { (statuses) in
@@ -1072,23 +1084,30 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                                 IndexPath(row: $0, section: 0)
                             }
                             self.statusesHome = stat + self.statusesHome
-                            self.tableView.beginUpdates()
-                            UIView.setAnimationsEnabled(false)
-                            var heights: CGFloat = 0
-                            let _ = indexPaths.map {
-                                if let cell = self.tableView.cellForRow(at: $0) as? TootCell {
-                                    heights += cell.bounds.height
+                            if self.fromSide {
+                                self.tableView.reloadData()
+                                self.fromSide = false
+                            } else {
+                                self.tableView.beginUpdates()
+                                UIView.setAnimationsEnabled(false)
+                                var heights: CGFloat = 0
+                                let _ = indexPaths.map {
+                                    if let cell = self.tableView.cellForRow(at: $0) as? TootCell {
+                                        heights += cell.bounds.height
+                                    }
+                                    if let cell = self.tableView.cellForRow(at: $0) as? TootImageCell {
+                                        heights += cell.bounds.height
+                                    }
+                                    if let cell = self.tableView.cellForRow(at: $0) as? LoadMoreCell {
+                                        heights += cell.bounds.height
+                                    }
                                 }
-                                if let cell = self.tableView.cellForRow(at: $0) as? TootImageCell {
-                                    heights += cell.bounds.height
+                                self.tableView.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
+                                if stat.count > self.tableView.numberOfRows(inSection: 0) {} else {
+                                    self.tableView.scrollToRow(at: IndexPath(row: stat.count, section: 0), at: .top, animated: false)
                                 }
-                                if let cell = self.tableView.cellForRow(at: $0) as? LoadMoreCell {
-                                    heights += cell.bounds.height
-                                }
+                                self.tableView.endUpdates()
                             }
-                            self.tableView.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
-                            self.tableView.scrollToRow(at: IndexPath(row: stat.count, section: 0), at: .top, animated: false)
-                            self.tableView.endUpdates()
                             UIView.setAnimationsEnabled(true)
                             
                             if UserDefaults.standard.value(forKey: "filterTimelines") as? Int == 1 {
@@ -1140,6 +1159,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             IndexPath(row: $0, section: 0)
                         }
                         self.statusesLocal = stat + self.statusesLocal
+                        if self.fromSide {
+                            self.tableViewL.reloadData()
+                            self.fromSide = false
+                        } else {
                         self.tableViewL.beginUpdates()
                         UIView.setAnimationsEnabled(false)
                         var heights: CGFloat = 0
@@ -1153,8 +1176,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                         }
                         self.tableViewL.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
 //                        self.tableViewL.setContentOffset(CGPoint(x: 0, y: heights), animated: false)
-                        self.tableViewL.scrollToRow(at: IndexPath(row: stat.count, section: 0), at: .top, animated: false)
+
+                        if stat.count > self.tableViewL.numberOfRows(inSection: 0) {} else {
+                            self.tableViewL.scrollToRow(at: IndexPath(row: stat.count, section: 0), at: .top, animated: false)
+                        }
                         self.tableViewL.endUpdates()
+                        }
                         UIView.setAnimationsEnabled(true)
 
                         if UserDefaults.standard.value(forKey: "filterTimelines") as? Int == 1 {
@@ -1205,6 +1232,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             IndexPath(row: $0, section: 0)
                         }
                         self.statusesFed = stat + self.statusesFed
+                        if self.fromSide {
+                            self.tableViewF.reloadData()
+                            self.fromSide = false
+                        } else {
                         self.tableViewF.beginUpdates()
                         UIView.setAnimationsEnabled(false)
                         var heights: CGFloat = 0
@@ -1218,8 +1249,12 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                         }
                         self.tableViewF.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
 //                        self.tableViewF.setContentOffset(CGPoint(x: 0, y: heights), animated: false)
-                        self.tableViewF.scrollToRow(at: IndexPath(row: stat.count, section: 0), at: .top, animated: false)
+
+                        if stat.count > self.tableViewF.numberOfRows(inSection: 0) {} else {
+                            self.tableViewF.scrollToRow(at: IndexPath(row: stat.count, section: 0), at: .top, animated: false)
+                        }
                         self.tableViewF.endUpdates()
+                        }
                         UIView.setAnimationsEnabled(true)
 
                         if UserDefaults.standard.value(forKey: "filterTimelines") as? Int == 1 {
@@ -1826,9 +1861,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             IndexPath(row: $0, section: 0)
                         }
                         self.statusesHome.append(contentsOf: stat)
-                        self.tableView.beginUpdates()
-                        self.tableView.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
-                        self.tableView.endUpdates()
+                        self.tableView.reloadData()
 
                         if UserDefaults.standard.value(forKey: "filterTimelines") as? Int == 1 {
                             self.statusesHome = self.statusesHome.filter({ (stat) -> Bool in
@@ -1867,9 +1900,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             IndexPath(row: $0, section: 0)
                         }
                         self.statusesLocal.append(contentsOf: stat)
-                        self.tableViewL.beginUpdates()
-                        self.tableViewL.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
-                        self.tableViewL.endUpdates()
+//                        self.tableViewL.beginUpdates()
+//                        self.tableViewL.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
+//                        self.tableViewL.endUpdates()
+                        self.tableViewL.reloadData()
 
                         if UserDefaults.standard.value(forKey: "filterTimelines") as? Int == 1 {
                             self.statusesLocal = self.statusesLocal.filter({ (stat) -> Bool in
@@ -1908,9 +1942,10 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             IndexPath(row: $0, section: 0)
                         }
                         self.statusesFed.append(contentsOf: stat)
-                        self.tableViewF.beginUpdates()
-                        self.tableViewF.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
-                        self.tableViewF.endUpdates()
+//                        self.tableViewF.beginUpdates()
+//                        self.tableViewF.insertRows(at: indexPaths, with: UITableView.RowAnimation.none)
+//                        self.tableViewF.endUpdates()
+                        self.tableViewF.reloadData()
 
                         if UserDefaults.standard.value(forKey: "filterTimelines") as? Int == 1 {
                             self.statusesFed = self.statusesFed.filter({ (stat) -> Bool in
@@ -1940,7 +1975,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        for x in self.tableView.visibleCells {
+        _ = self.tableView.visibleCells.map ({ x in
             if let z = x as? LoadMoreCell {
                 if let indexPath = self.tableView.indexPath(for: z) {
                     let rectOfCellInTableView = self.tableView.rectForRow(at: indexPath)
@@ -1959,7 +1994,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                     }
                 }
             }
-        }
+        })
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -2529,9 +2564,9 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
             do {
                 let json = try JSONDecoder().decode(tagInstances.self, from: data ?? Data())
                 DispatchQueue.main.async {
-                    for x in json.instances {
+                    _ = json.instances.map ({ x in
                         self.altInstances.append(x.name)
-                    }
+                    })
                     self.altInstances.insert("social.nofftopia.com", at: 0)
                     self.altInstances.insert("mastodon.technology", at: 0)
                     self.altInstances.insert("mastodon.social", at: 0)

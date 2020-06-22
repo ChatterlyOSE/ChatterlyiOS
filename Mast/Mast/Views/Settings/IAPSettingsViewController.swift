@@ -16,7 +16,7 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
     var tableView = UITableView()
     var bgView = UIView()
     let firstSection = ["Your contribution goes a long way".localized]
-    let firstSectionDescriptions = ["\nThe tip jar helps keep Mast running, and supports the developer in getting awesome updates to you.\n\nThis app was previously a paid upfront app, and version 2 was entirely re-written from the ground up with a whole new design (and is what you're seeing here). This version introduced the notion of In-App Purchases, which were looked upon negatively. In an attempt to rectify this, I've reverted to the previous method.\n\nIf you enjoy using this app and want to support the developer (that's me, Shihab - a 24 year-old indie developer trying his best to make cool products), please consider one of the tip jar options below.\n\nThank you for being awesome!".localized]
+    let firstSectionDescriptions = ["\nThe tip jar helps keep Mast running, and supports the developer in getting awesome updates to you.\n\nVersion 2 was entirely re-written from the ground up with a whole new design (and is what you're seeing here).\n\nIf you enjoy using this app and want to support the developer (that's me, Shihab - a young indie developer trying his best to make cool products), please consider one of the tip jar options below.\n\nThank you for being awesome!".localized]
     let firstSectionImage = ["heart"]
     var button1 = UIButton()
     var button1Title = UILabel()
@@ -251,7 +251,7 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
                             UserDefaults.standard.set(true, forKey: "pnlikes")
                             UserDefaults.standard.set(true, forKey: "pnboosts")
                             UserDefaults.standard.set(true, forKey: "pnfollows")
-                            UIApplication.shared.registerForRemoteNotifications()
+//                            UIApplication.shared.registerForRemoteNotifications()
                         }
                     }
                     
@@ -386,7 +386,7 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
                             UserDefaults.standard.set(true, forKey: "pnlikes")
                             UserDefaults.standard.set(true, forKey: "pnboosts")
                             UserDefaults.standard.set(true, forKey: "pnfollows")
-                            UIApplication.shared.registerForRemoteNotifications()
+//                            UIApplication.shared.registerForRemoteNotifications()
                         }
                     }
                     
