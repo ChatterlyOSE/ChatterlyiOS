@@ -229,7 +229,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     @objc func supportPage() {
-        let url = URL(string: "https://www.thebluebird.app")!
+        let url = URL(string: "https://chatterly.me")!
         UIApplication.shared.openURL(url)
     }
     
