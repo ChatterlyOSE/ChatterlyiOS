@@ -13,8 +13,33 @@ import SwiftyStoreKit
 
 class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var tableView = UITableView()hjugh
-    var shouldShowX: Bool = falseg
+    var tableView = UITableView()
+    var bgView = UIView()
+    let firstSection = ["Your contribution goes a long way".localized]
+    let firstSectionDescriptions = ["\nThe tip jar helps keep Chatterly running.".localized]
+    let firstSectionImage = ["heart"]
+    var button1 = UIButton()
+    var button1Title = UILabel()
+    var button1Title2 = UILabel()
+    var button2 = UIButton()
+    var button2Title = UILabel()
+    var button2Title2 = UILabel()
+    var tandc = UILabel()
+    var button4 = UIButton()
+    var button5 = UIButton()
+    let starButton = UIButton()
+    let tandctext = "The tip jar is either an auto-renewing subscription, or a one-off payment.".localized
+    
+    var productID = ""
+    var lifetimeProduct : SKProduct?
+    var annualProduct : SKProduct?
+    var monthlyProduct : SKProduct?
+    var price1 = "---"
+    var price2 = "---"
+    var price3 = "---"
+    
+    var shouldShowX: Bool = false
+    
     override func viewDidLayoutSubviews() {
         self.tableView.frame = CGRect(x: self.view.safeAreaInsets.left, y: 0, width: self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right, height: self.view.bounds.height - 210)
         self.bgView.frame = CGRect(x: 0, y: self.view.bounds.height - 210, width: self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right, height: 210)
