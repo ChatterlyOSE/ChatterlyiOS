@@ -12,7 +12,7 @@ public class Client: NSObject, ClientType, URLSessionTaskDelegate {
     let baseURL: String
 //    let session: URLSession
     //    enum Constant: String {
-    //        case sessionID = "com.shi.Mast.bgSession"
+    //        case sessionID = "me.chatterly.mobile.bgSession"
     //    }
         var session: URLSession = {
             return URLSession(configuration: URLSessionConfiguration.default, delegate: nil, delegateQueue: .main)

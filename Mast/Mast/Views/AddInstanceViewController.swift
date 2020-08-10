@@ -130,7 +130,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
         vw.backgroundColor = .clear
         let title = UILabel()
         title.frame = CGRect(x: (UIApplication.shared.windows.first?.safeAreaInsets.left ?? 0) + 10, y: 0, width: self.view.bounds.width - 20, height: 60)
-        title.text = "Pick the instance you'd like to add an account from"
+        title.text = "Click on Chatterly.me to login, or enter your server URL if you're using ChatterlyOSE."
         title.textColor = UIColor(named: "baseBlack")!.withAlphaComponent(0.25)
         title.font = UIFont.systemFont(ofSize: 14)
         title.numberOfLines = 0
@@ -168,7 +168,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
         GlobalStruct.newClient = Client(baseURL: "https://\("\(self.altInstances[indexPath.row])")")
         let request = Clients.register(
             clientName: "Mast",
-            redirectURI: "com.shi.Mast://addNewInstance",
+            redirectURI: "me.chatterly.mobile://addNewInstance",
             scopes: [.read, .write, .follow, .push],
             website: "https://twitter.com/jpeguin"
         )
@@ -200,7 +200,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                 GlobalStruct.newInstance?.clientID = application.clientID
                 GlobalStruct.newInstance?.clientSecret = application.clientSecret
                 GlobalStruct.newInstance?.returnedText = "\(self.altInstances[indexPath.row])"
-                GlobalStruct.newInstance?.redirect = "com.shi.Mast://addNewInstance".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+                GlobalStruct.newInstance?.redirect = "me.chatterly.mobile://addNewInstance".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
                 DispatchQueue.main.async {
                     let queryURL = URL(string: "https://\("\(self.altInstances[indexPath.row])")/oauth/authorize?response_type=code&redirect_uri=\(GlobalStruct.newInstance!.redirect)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
                     UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
@@ -219,7 +219,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
     }
     
     func fetchAltInstances() {
-        let urlStr = "https://instances.social/api/1.0/instances/list?count=\(100)&include_closed=\(false)&include_down=\(false)"
+        let urlStr = "https://api.chatterly.me/chattery/api/1.0/instances/list?count=\(100)&include_closed=\(false)&include_down=\(false)"
         let url: URL = URL(string: urlStr)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -235,13 +235,13 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                     _ = json.instances.map ({ x in
                         self.altInstances.append(x.name)
                     })
-                    self.altInstances.insert("social.nofftopia.com", at: 0)
-                    self.altInstances.insert("mastodon.technology", at: 0)
-                    self.altInstances.insert("mastodon.social", at: 0)
+                    self.altInstances.insert("chatterly.me", at: 0)
                     self.tableView.reloadData()
                 }
             } catch {
                 print("err")
+                self.altInstances.insert("chatterly.me", at: 0)
+                self.tableView.reloadData()
             }
         }
         task.resume()
@@ -294,16 +294,16 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                     GlobalStruct.newClient = Client(baseURL: "https://\(returnedText)")
                     let request = Clients.register(
                         clientName: "Mast",
-                        redirectURI: "com.shi.Mast://addNewInstance",
+                        redirectURI: "me.chatterly.mobile://addNewInstance",
                         scopes: [.read, .write, .follow, .push],
                         website: "https://twitter.com/jpeguin"
                     )
                     GlobalStruct.newClient.run(request) { (application) in
                         if application.value == nil {
                             DispatchQueue.main.async {
-                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like mastodon.social or mastodon.technology, or use one from the list to get started. You can sign in if you already have an account registered with the instance, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
+                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like chatterly.me to get started. You can sign in if you already have an account registered with Chatterly, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
                                 let op1 = UIAlertAction(title: "Find out more".localized, style: .default , handler:{ (UIAlertAction) in
-                                    let queryURL = URL(string: "https://joinmastodon.org")!
+                                    let queryURL = URL(string: "https://chatterly.me")!
                                     UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
                                         if !success {
                                             UIApplication.shared.open(queryURL)
@@ -326,7 +326,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                             GlobalStruct.newInstance?.clientID = application.clientID
                             GlobalStruct.newInstance?.clientSecret = application.clientSecret
                             GlobalStruct.newInstance?.returnedText = returnedText
-                            GlobalStruct.newInstance?.redirect = "com.shi.Mast://addNewInstance".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+                            GlobalStruct.newInstance?.redirect = "me.chatterly.mobile://addNewInstance".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
                             DispatchQueue.main.async {
                                 let queryURL = URL(string: "https://\(returnedText)/oauth/authorize?response_type=code&redirect_uri=\(GlobalStruct.newInstance!.redirect)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
                                 UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
@@ -347,16 +347,16 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                     GlobalStruct.client = Client(baseURL: "https://\(returnedText)")
                     let request = Clients.register(
                         clientName: "Mast",
-                        redirectURI: "com.shi.Mast://success",
+                        redirectURI: "me.chatterly.mobile://success",
                         scopes: [.read, .write, .follow, .push],
                         website: "https://twitter.com/jpeguin"
                     )
                     GlobalStruct.client.run(request) { (application) in
                         if application.value == nil {
                             DispatchQueue.main.async {
-                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like mastodon.social or mastodon.technology, or use one from the list to get started. You can sign in if you already have an account registered with the instance, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
+                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like chatterly.me, or use one from the list to get started. You can sign in if you already have an account registered with Chatterly, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
                                 let op1 = UIAlertAction(title: "Find out more".localized, style: .default , handler:{ (UIAlertAction) in
-                                    let queryURL = URL(string: "https://joinmastodon.org")!
+                                    let queryURL = URL(string: "https://chatterly.me")!
                                     UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
                                         if !success {
                                             UIApplication.shared.open(queryURL)
@@ -380,7 +380,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                             GlobalStruct.currentInstance.clientSecret = application.clientSecret
                             GlobalStruct.currentInstance.returnedText = returnedText
                             DispatchQueue.main.async {
-                                let queryURL = URL(string: "https://\(returnedText)/oauth/authorize?response_type=code&redirect_uri=\("com.shi.Mast://success".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
+                                let queryURL = URL(string: "https://\(returnedText)/oauth/authorize?response_type=code&redirect_uri=\("me.chatterly.mobile://success".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
                                 UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
                                     if !success {
                                         if (UserDefaults.standard.object(forKey: "linkdest") == nil) || (UserDefaults.standard.object(forKey: "linkdest") as! Int == 0) {

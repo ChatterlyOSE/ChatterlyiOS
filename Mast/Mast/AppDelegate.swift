@@ -95,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         let application = UIApplication.shared
         if application.applicationState == .inactive {
-            if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+            if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
                 if userDefaults.value(forKey: "notidpush") != nil {
                     if let id = userDefaults.value(forKey: "notidpush") as? Int64 {
                         GlobalStruct.curIDNoti = "\(id)"
@@ -210,13 +210,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
-        if options.userActivities.first?.activityType == "com.shi.Mast.openComposer" {
+        if options.userActivities.first?.activityType == "me.chatterly.mobile.openComposer" {
             return UISceneConfiguration(name: "New Configuration", sessionRole: connectingSceneSession.role)
         }
-        if options.userActivities.first?.activityType == "com.shi.Mast.openComposer2" {
+        if options.userActivities.first?.activityType == "me.chatterly.mobile.openComposer2" {
             return UISceneConfiguration(name: "New Configuration 2", sessionRole: connectingSceneSession.role)
         }
-        if options.userActivities.first?.activityType == "com.shi.Mast.openSettings" {
+        if options.userActivities.first?.activityType == "me.chatterly.mobile.openSettings" {
             return UISceneConfiguration(name: "New Configuration 3", sessionRole: connectingSceneSession.role)
         }
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)

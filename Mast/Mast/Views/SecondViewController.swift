@@ -1206,7 +1206,7 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         #if targetEnvironment(macCatalyst)
         GlobalStruct.macWindow = 2
             GlobalStruct.macReply = status
-        let userActivity = NSUserActivity(activityType: "com.shi.Mast.openComposer2")
+        let userActivity = NSUserActivity(activityType: "me.chatterly.mobile.openComposer2")
         UIApplication.shared.requestSceneSessionActivation(nil, userActivity: userActivity, options: nil) { (e) in
           print("error", e)
         }

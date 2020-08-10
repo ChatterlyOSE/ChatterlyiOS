@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "53B5F1DA233BC4BA0099B170"
-               BuildableName = "Mast Push.appex"
+               BuildableName = "Chatterly Push.appex"
                BlueprintName = "Mast Push"
                ReferencedContainer = "container:Mast.xcodeproj">
             </BuildableReference>
@@ -30,7 +30,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "53449D2C23293E3600A470E2"
-               BuildableName = "Mast.app"
+               BuildableName = "Chatterly.app"
                BlueprintName = "Mast"
                ReferencedContainer = "container:Mast.xcodeproj">
             </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53449D2C23293E3600A470E2"
-            BuildableName = "Mast.app"
+            BuildableName = "Chatterly.app"
             BlueprintName = "Mast"
             ReferencedContainer = "container:Mast.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "53449D2C23293E3600A470E2"
-            BuildableName = "Mast.app"
+            BuildableName = "Chatterly.app"
             BlueprintName = "Mast"
             ReferencedContainer = "container:Mast.xcodeproj">
          </BuildableReference>

@@ -160,7 +160,7 @@ class VerticalTabBarController: UIViewController {
     @objc func settings() {
         #if targetEnvironment(macCatalyst)
         GlobalStruct.macWindow = 3
-        let userActivity = NSUserActivity(activityType: "com.shi.Mast.openSettings")
+        let userActivity = NSUserActivity(activityType: "me.chatterly.mobile.openSettings")
         UIApplication.shared.requestSceneSessionActivation(nil, userActivity: userActivity, options: nil) { (e) in
           print("error", e)
         }
@@ -191,7 +191,7 @@ class VerticalTabBarController: UIViewController {
     @objc func compose() {
         #if targetEnvironment(macCatalyst)
         GlobalStruct.macWindow = 1
-        let userActivity = NSUserActivity(activityType: "com.shi.Mast.openComposer")
+        let userActivity = NSUserActivity(activityType: "me.chatterly.mobile.openComposer")
         UIApplication.shared.requestSceneSessionActivation(nil, userActivity: userActivity, options: nil) { (e) in
           print("error", e)
         }

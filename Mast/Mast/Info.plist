@@ -1103,7 +1103,7 @@
 			<string></string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.shi.Mast</string>
+				<string>me.chatterly.mobile</string>
 			</array>
 		</dict>
 	</array>

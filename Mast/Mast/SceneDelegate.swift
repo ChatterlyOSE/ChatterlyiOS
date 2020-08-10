@@ -130,13 +130,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        if shortcutItem.type == "com.shi.Mast.NewToot" {
+        if shortcutItem.type == "me.chatterly.mobile.NewToot" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "addTapped"), object: self)
             completionHandler(true)
-        } else if shortcutItem.type == "com.shi.Mast.Notifications" {
+        } else if shortcutItem.type == "me.chatterly.mobile.Notifications" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "viewNotifications"), object: self)
             completionHandler(true)
-        } else if shortcutItem.type == "com.shi.Mast.Messages" {
+        } else if shortcutItem.type == "me.chatterly.mobile.Messages" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "viewMessages"), object: self)
             completionHandler(true)
         } else {
@@ -146,13 +146,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        if userActivity.activityType == "com.shi.Mast.newToot" {
+        if userActivity.activityType == "me.chatterly.mobile.newToot" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "addTapped"), object: self)
         }
-        if userActivity.activityType == "com.shi.Mast.viewNotifs" {
+        if userActivity.activityType == "me.chatterly.mobile.viewNotifs" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "viewNotifications"), object: self)
         }
-        if userActivity.activityType == "com.shi.Mast.viewMessages" {
+        if userActivity.activityType == "me.chatterly.mobile.viewMessages" {
             NotificationCenter.default.post(name: Notification.Name(rawValue: "viewMessages"), object: self)
         }
     }
@@ -188,7 +188,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
         
-        if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+        if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
             userDefaults.set(0, forKey: "badgec")
         }
         UIApplication.shared.applicationIconBadgeNumber = 0

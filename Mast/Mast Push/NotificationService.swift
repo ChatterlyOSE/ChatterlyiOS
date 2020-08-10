@@ -31,7 +31,7 @@ class NotificationService: UNNotificationServiceExtension {
             
             if let content = try? bestAttemptContent.decrypt(state: storedState) {
                 if content.notificationType == .follow {} else {
-                    if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+                    if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
                         userDefaults.set(content.notificationId, forKey: "notidpush")
                     }
                 }
@@ -40,7 +40,7 @@ class NotificationService: UNNotificationServiceExtension {
                 bestAttemptContent.title = content.title
                 bestAttemptContent.body = content.body.replacingOccurrences(of: "&#39;", with: "'").replacingOccurrences(of: "&lt;", with: "<").replacingOccurrences(of: "&gt;", with: ">").replacingOccurrences(of: "&amp;", with: "&").replacingOccurrences(of: "&quot;", with: "\"")
 
-                if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+                if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
                     if let z = userDefaults.value(forKey: "badgec") as? Int {
                         bestAttemptContent.badge = NSNumber(value: (z + 1))
                         userDefaults.set(bestAttemptContent.badge?.intValue ?? 1, forKey: "badgec")

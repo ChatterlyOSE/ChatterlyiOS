@@ -21,7 +21,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         self.extensionContext?.widgetLargestAvailableDisplayMode = .expanded
         
         var client = Client(baseURL: "")
-        if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+        if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
             let value1 = userDefaults.string(forKey: "key1")
             let value2 = userDefaults.string(forKey: "key2")
             client = Client(
@@ -58,7 +58,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
         super.viewDidAppear(true)
         
         var client = Client(baseURL: "")
-        if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+        if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
             let value1 = userDefaults.string(forKey: "key1")
             let value2 = userDefaults.string(forKey: "key2")
             client = Client(
@@ -101,7 +101,7 @@ class TodayViewController: UIViewController, NCWidgetProviding, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.openURL("com.shi.mastodon://id=\(self.allStats[indexPath.row].id)")
+        self.openURL("me.chatterly.mobileodon://id=\(self.allStats[indexPath.row].id)")
     }
     
     @objc func openURL(_ url: String) -> Bool {

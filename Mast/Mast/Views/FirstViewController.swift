@@ -463,16 +463,16 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
         }
         
         let icon00 = UIApplicationShortcutIcon(systemImageName: "plus")
-        let item00 = UIApplicationShortcutItem(type: "com.shi.Mast.NewToot", localizedTitle: "New Toot".localized, localizedSubtitle: nil, icon: icon00, userInfo: nil)
+        let item00 = UIApplicationShortcutItem(type: "me.chatterly.mobile.NewToot", localizedTitle: "New Toot".localized, localizedSubtitle: nil, icon: icon00, userInfo: nil)
         item00.accessibilityLabel = "New Toot".localized
         let icon0 = UIApplicationShortcutIcon(systemImageName: "bell")
-        let item0 = UIApplicationShortcutItem(type: "com.shi.Mast.Notifications", localizedTitle: "View Notifications".localized, localizedSubtitle: nil, icon: icon0, userInfo: nil)
+        let item0 = UIApplicationShortcutItem(type: "me.chatterly.mobile.Notifications", localizedTitle: "View Notifications".localized, localizedSubtitle: nil, icon: icon0, userInfo: nil)
         item0.accessibilityLabel = "View Notifications".localized
         let icon1 = UIApplicationShortcutIcon(systemImageName: "paperplane")
-        let item1 = UIApplicationShortcutItem(type: "com.shi.Mast.Messages", localizedTitle: "View Messages".localized, localizedSubtitle: nil, icon: icon1, userInfo: nil)
+        let item1 = UIApplicationShortcutItem(type: "me.chatterly.mobile.Messages", localizedTitle: "View Messages".localized, localizedSubtitle: nil, icon: icon1, userInfo: nil)
         item1.accessibilityLabel = "View Messages".localized
         let icon2 = UIApplicationShortcutIcon(systemImageName: "person.crop.circle")
-        let item2 = UIApplicationShortcutItem(type: "com.shi.Mast.Profile", localizedTitle: "View Profile".localized, localizedSubtitle: nil, icon: icon2, userInfo: nil)
+        let item2 = UIApplicationShortcutItem(type: "me.chatterly.mobile.Profile", localizedTitle: "View Profile".localized, localizedSubtitle: nil, icon: icon2, userInfo: nil)
         item2.accessibilityLabel = "View Profile".localized
         UIApplication.shared.shortcutItems = [item00, item0, item1, item2]
         
@@ -644,7 +644,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
     }
     
     func initialFetches() {
-        if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+        if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
             userDefaults.set(GlobalStruct.currentInstance.accessToken, forKey: "key1")
             userDefaults.set(GlobalStruct.currentInstance.returnedText, forKey: "key2")
             userDefaults.synchronize()
@@ -2005,7 +2005,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
             GlobalStruct.client = Client(baseURL: "https://\("\(self.altInstances[indexPath.row])")")
             let request = Clients.register(
                 clientName: "Mast",
-                redirectURI: "com.shi.Mast://success",
+                redirectURI: "me.chatterly.mobile://success",
                 scopes: [.read, .write, .follow, .push],
                 website: "https://twitter.com/jpeguin"
             )
@@ -2037,7 +2037,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                     GlobalStruct.currentInstance.clientID = application.clientID
                     GlobalStruct.currentInstance.clientSecret = application.clientSecret
                     GlobalStruct.currentInstance.returnedText = "\(self.altInstances[indexPath.row])"
-                    GlobalStruct.currentInstance.redirect = "com.shi.Mast://success".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+                    GlobalStruct.currentInstance.redirect = "me.chatterly.mobile://success".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
                     DispatchQueue.main.async {
                         let queryURL = URL(string: "https://\("\(self.altInstances[indexPath.row])")/oauth/authorize?response_type=code&redirect_uri=\(GlobalStruct.currentInstance.redirect)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
                         UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
@@ -2162,7 +2162,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
         #if targetEnvironment(macCatalyst)
         GlobalStruct.macWindow = 2
             GlobalStruct.macReply = status
-        let userActivity = NSUserActivity(activityType: "com.shi.Mast.openComposer2")
+        let userActivity = NSUserActivity(activityType: "me.chatterly.mobile.openComposer2")
         UIApplication.shared.requestSceneSessionActivation(nil, userActivity: userActivity, options: nil) { (e) in
           print("error", e)
         }
@@ -2625,7 +2625,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                     GlobalStruct.client = Client(baseURL: "https://\(returnedText)")
                     let request = Clients.register(
                         clientName: "Mast",
-                        redirectURI: "com.shi.Mast://addNewInstance",
+                        redirectURI: "me.chatterly.mobile://addNewInstance",
                         scopes: [.read, .write, .follow, .push],
                         website: "https://twitter.com/jpeguin"
                     )
@@ -2657,7 +2657,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             GlobalStruct.newInstance?.clientID = application.clientID
                             GlobalStruct.newInstance?.clientSecret = application.clientSecret
                             GlobalStruct.newInstance?.returnedText = returnedText
-                            GlobalStruct.newInstance?.redirect = "com.shi.Mast://addNewInstance".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+                            GlobalStruct.newInstance?.redirect = "me.chatterly.mobile://addNewInstance".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
                             DispatchQueue.main.async {
                                 let queryURL = URL(string: "https://\(returnedText)/oauth/authorize?response_type=code&redirect_uri=\(GlobalStruct.newInstance!.redirect)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
                                 UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
@@ -2678,7 +2678,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                     GlobalStruct.client = Client(baseURL: "https://\(returnedText)")
                     let request = Clients.register(
                         clientName: "Mast",
-                        redirectURI: "com.shi.Mast://success",
+                        redirectURI: "me.chatterly.mobile://success",
                         scopes: [.read, .write, .follow, .push],
                         website: "https://twitter.com/jpeguin"
                     )
@@ -2710,7 +2710,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                             GlobalStruct.currentInstance.clientID = application.clientID
                             GlobalStruct.currentInstance.clientSecret = application.clientSecret
                             GlobalStruct.currentInstance.returnedText = returnedText
-                            GlobalStruct.currentInstance.redirect = "com.shi.Mast://success".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+                            GlobalStruct.currentInstance.redirect = "me.chatterly.mobile://success".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
                             DispatchQueue.main.async {
                                 let queryURL = URL(string: "https://\(returnedText)/oauth/authorize?response_type=code&redirect_uri=\(GlobalStruct.currentInstance.redirect)&scope=read%20write%20follow%20push&client_id=\(application.clientID)")!
                                 UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in

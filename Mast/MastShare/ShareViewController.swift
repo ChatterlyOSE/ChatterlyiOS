@@ -401,7 +401,7 @@ class ShareViewController: UIViewController, UITextViewDelegate, UINavigationBar
         impactFeedbackgenerator.prepare()
         impactFeedbackgenerator.impactOccurred()
         var client = Client(baseURL: "")
-        if let userDefaults = UserDefaults(suiteName: "group.com.shi.Mast.wormhole") {
+        if let userDefaults = UserDefaults(suiteName: "group.me.chatterly.mobile.wormhole") {
             let value1 = userDefaults.string(forKey: "key1")
             let value2 = userDefaults.string(forKey: "key2")
             client = Client(

@@ -166,7 +166,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
                 
                 let purchaseResult0 = SwiftyStoreKit.verifySubscription(
                     ofType: .autoRenewable,
-                    productId: "com.shi.Mast.months",
+                    productId: "me.chatterly.mobile.months",
                     inReceipt: receipt)
                 switch purchaseResult0 {
                 case .purchased(let expiryDate, let items):
@@ -179,7 +179,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
                 }
                 
                 let purchaseResult2 = SwiftyStoreKit.verifyPurchase(
-                    productId: "com.shi.Mast.lifes",
+                    productId: "me.chatterly.mobile.lifes",
                     inReceipt: receipt)
                 switch purchaseResult2 {
                 case .purchased:
@@ -199,7 +199,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
                         
                         let purchaseResult0 = SwiftyStoreKit.verifySubscription(
                             ofType: .autoRenewable,
-                            productId: "com.shi.Mast.months",
+                            productId: "me.chatterly.mobile.months",
                             inReceipt: receipt)
                         switch purchaseResult0 {
                         case .purchased(let expiryDate, let items):
@@ -212,7 +212,7 @@ class ViewController: UITabBarController, UITabBarControllerDelegate {
                         }
                         
                         let purchaseResult2 = SwiftyStoreKit.verifyPurchase(
-                            productId: "com.shi.Mast.lifes",
+                            productId: "me.chatterly.mobile.lifes",
                             inReceipt: receipt)
                         switch purchaseResult2 {
                         case .purchased:

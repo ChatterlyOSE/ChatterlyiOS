@@ -113,7 +113,7 @@ class ShortcutsSettingsViewController: UIViewController, UITableViewDataSource, 
         self.latestTapped = button.tag
         
         if self.latestTapped == 0 {
-            let activity1 = NSUserActivity(activityType: "com.shi.Mast.newToot")
+            let activity1 = NSUserActivity(activityType: "me.chatterly.mobile.newToot")
             activity1.title = "Create a new toot".localized
             let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
             attributes.contentDescription = "Create a new toot".localized
@@ -130,14 +130,14 @@ class ShortcutsSettingsViewController: UIViewController, UITableViewDataSource, 
             vc.delegate = self
             present(vc, animated: true, completion: nil)
         } else if self.latestTapped == 1 {
-            let activity1 = NSUserActivity(activityType: "com.shi.Mast.viewNotifs")
+            let activity1 = NSUserActivity(activityType: "me.chatterly.mobile.viewNotifs")
             activity1.title = "View your notifications".localized
             let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
             attributes.contentDescription = "View your notifications".localized
             activity1.contentAttributeSet = attributes
             activity1.isEligibleForSearch = true
             activity1.isEligibleForPrediction = true
-            activity1.persistentIdentifier = "com.shi.Mast.viewNotifs"
+            activity1.persistentIdentifier = "me.chatterly.mobile.viewNotifs"
             activity1.suggestedInvocationPhrase = "View your notifications".localized
             activity1.persistentIdentifier = String(button.tag)
             self.view.userActivity = activity1
@@ -147,14 +147,14 @@ class ShortcutsSettingsViewController: UIViewController, UITableViewDataSource, 
             vc.delegate = self
             present(vc, animated: true, completion: nil)
         } else if self.latestTapped == 2 {
-            let activity1 = NSUserActivity(activityType: "com.shi.Mast.viewMessages")
+            let activity1 = NSUserActivity(activityType: "me.chatterly.mobile.viewMessages")
             activity1.title = "View your messages".localized
             let attributes = CSSearchableItemAttributeSet(itemContentType: kUTTypeItem as String)
             attributes.contentDescription = "View your messages".localized
             activity1.contentAttributeSet = attributes
             activity1.isEligibleForSearch = true
             activity1.isEligibleForPrediction = true
-            activity1.persistentIdentifier = "com.shi.Mast.viewMessages"
+            activity1.persistentIdentifier = "me.chatterly.mobile.viewMessages"
             activity1.suggestedInvocationPhrase = "View your messages".localized
             activity1.persistentIdentifier = String(button.tag)
             self.view.userActivity = activity1

@@ -445,7 +445,7 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func fetchAvailableProducts()  {
-        SwiftyStoreKit.retrieveProductsInfo(["com.shi.Mast.lifes"]) { result in
+        SwiftyStoreKit.retrieveProductsInfo(["me.chatterly.mobile.lifes"]) { result in
             let numberFormatter = NumberFormatter()
             numberFormatter.formatterBehavior = .behavior10_4
             numberFormatter.numberStyle = .currency
@@ -466,7 +466,7 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
         
-        SwiftyStoreKit.retrieveProductsInfo(["com.shi.Mast.months"]) { result in
+        SwiftyStoreKit.retrieveProductsInfo(["me.chatterly.mobile.months"]) { result in
             let numberFormatter = NumberFormatter()
             numberFormatter.formatterBehavior = .behavior10_4
             numberFormatter.numberStyle = .currency

@@ -24,7 +24,7 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#if targetEnvironment(macCatlyst)
+#if targetEnvironment(macCatalyst)
 import AppKit
 
 extension KingfisherWrapper where Base: NSButton {
