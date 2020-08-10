@@ -302,117 +302,7 @@
 		5379F4322333C3F800DC1F33 /* ProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379F4312333C3F800DC1F33 /* ProfileImageCell.swift */; };
 		5379F4342333C4AC00DC1F33 /* CollectionImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379F4332333C4AB00DC1F33 /* CollectionImageCell.swift */; };
 		5379F4362334CAE800DC1F33 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5379F4352334CAE800DC1F33 /* ListCell.swift */; };
-		53935867238865BB00D77FD1 /* Chatterly.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 53935866238865BB00D77FD1 /* Chatterly.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		53935872238865BC00D77FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53935871238865BC00D77FD1 /* Assets.xcassets */; };
-		53935877238865BC00D77FD1 /* Chatterly.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5393585A238865B800D77FD1 /* Chatterly.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		5393588D2388664000D77FD1 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358812388663D00D77FD1 /* InterfaceController.swift */; };
-		5393588E2388664000D77FD1 /* FedTimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358822388663E00D77FD1 /* FedTimelineController.swift */; };
-		5393588F2388664000D77FD1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358832388663E00D77FD1 /* Date.swift */; };
-		539358902388664000D77FD1 /* StoreStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358842388663E00D77FD1 /* StoreStruct.swift */; };
-		539358912388664000D77FD1 /* TimelineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358852388663F00D77FD1 /* TimelineRow.swift */; };
-		539358922388664000D77FD1 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358862388663F00D77FD1 /* DetailController.swift */; };
-		539358932388664000D77FD1 /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358872388663F00D77FD1 /* DetailRow.swift */; };
-		539358942388664000D77FD1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358882388663F00D77FD1 /* ProfileController.swift */; };
-		539358952388664000D77FD1 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358892388663F00D77FD1 /* NotificationController.swift */; };
-		539358962388664000D77FD1 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393588A2388663F00D77FD1 /* ExtensionDelegate.swift */; };
-		539358972388664000D77FD1 /* LocalTimelineController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393588B2388664000D77FD1 /* LocalTimelineController.swift */; };
-		539358982388664000D77FD1 /* TootController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393588C2388664000D77FD1 /* TootController.swift */; };
-		539358FC2388665400D77FD1 /* PaginationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393589A2388665400D77FD1 /* PaginationItem.swift */; };
-		539358FD2388665400D77FD1 /* ClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393589B2388665400D77FD1 /* ClientType.swift */; };
-		539358FE2388665400D77FD1 /* Parameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393589C2388665400D77FD1 /* Parameter.swift */; };
-		539358FF2388665400D77FD1 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393589D2388665400D77FD1 /* Functions.swift */; };
-		539359002388665400D77FD1 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393589E2388665400D77FD1 /* Result.swift */; };
-		539359012388665400D77FD1 /* URLComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A02388665400D77FD1 /* URLComponents.swift */; };
-		539359022388665400D77FD1 /* CharacterSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A12388665400D77FD1 /* CharacterSet.swift */; };
-		539359032388665400D77FD1 /* URLRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A22388665400D77FD1 /* URLRequest.swift */; };
-		539359042388665400D77FD1 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A32388665400D77FD1 /* Data.swift */; };
-		539359052388665400D77FD1 /* Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A42388665400D77FD1 /* Decodable.swift */; };
-		539359062388665400D77FD1 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A52388665400D77FD1 /* String.swift */; };
-		539359072388665400D77FD1 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A62388665400D77FD1 /* DateFormatter.swift */; };
-		539359082388665400D77FD1 /* HTTPURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A72388665400D77FD1 /* HTTPURLResponse.swift */; };
-		539359092388665400D77FD1 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358A92388665400D77FD1 /* Report.swift */; };
-		5393590A2388665400D77FD1 /* Mention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358AA2388665400D77FD1 /* Mention.swift */; };
-		5393590B2388665400D77FD1 /* AttachmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358AB2388665400D77FD1 /* AttachmentType.swift */; };
-		5393590C2388665400D77FD1 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358AC2388665400D77FD1 /* Visibility.swift */; };
-		5393590D2388665400D77FD1 /* Attachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358AD2388665400D77FD1 /* Attachment.swift */; };
-		5393590E2388665400D77FD1 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358AE2388665400D77FD1 /* Empty.swift */; };
-		5393590F2388665400D77FD1 /* ClientApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358AF2388665400D77FD1 /* ClientApplication.swift */; };
-		539359102388665400D77FD1 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B02388665400D77FD1 /* Card.swift */; };
-		539359112388665400D77FD1 /* LoginSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B12388665400D77FD1 /* LoginSettings.swift */; };
-		539359122388665400D77FD1 /* AccessScope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B22388665400D77FD1 /* AccessScope.swift */; };
-		539359132388665400D77FD1 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B32388665400D77FD1 /* Results.swift */; };
-		539359142388665400D77FD1 /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B42388665400D77FD1 /* List.swift */; };
-		539359152388665400D77FD1 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B52388665400D77FD1 /* Context.swift */; };
-		539359162388665400D77FD1 /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B62388665400D77FD1 /* Instance.swift */; };
-		539359172388665400D77FD1 /* Relationship.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B72388665400D77FD1 /* Relationship.swift */; };
-		539359182388665400D77FD1 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B82388665400D77FD1 /* Notification.swift */; };
-		539359192388665400D77FD1 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358B92388665400D77FD1 /* Application.swift */; };
-		5393591A2388665400D77FD1 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358BA2388665400D77FD1 /* Status.swift */; };
-		5393591B2388665400D77FD1 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358BB2388665400D77FD1 /* Emoji.swift */; };
-		5393591C2388665400D77FD1 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358BC2388665400D77FD1 /* Tag.swift */; };
-		5393591D2388665400D77FD1 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358BD2388665400D77FD1 /* Account.swift */; };
-		5393591E2388665400D77FD1 /* NotificationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358BE2388665400D77FD1 /* NotificationType.swift */; };
-		5393591F2388665400D77FD1 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358BF2388665400D77FD1 /* RequestError.swift */; };
-		539359202388665400D77FD1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C02388665400D77FD1 /* HTTPMethod.swift */; };
-		539359212388665400D77FD1 /* Mutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C22388665400D77FD1 /* Mutes.swift */; };
-		539359222388665400D77FD1 /* Instances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C32388665400D77FD1 /* Instances.swift */; };
-		539359232388665400D77FD1 /* Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C42388665400D77FD1 /* Statuses.swift */; };
-		539359242388665400D77FD1 /* FollowRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C52388665400D77FD1 /* FollowRequests.swift */; };
-		539359252388665500D77FD1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C62388665400D77FD1 /* Login.swift */; };
-		539359262388665500D77FD1 /* Favourites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C72388665400D77FD1 /* Favourites.swift */; };
-		539359272388665500D77FD1 /* Blocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C82388665400D77FD1 /* Blocks.swift */; };
-		539359282388665500D77FD1 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358C92388665400D77FD1 /* Notifications.swift */; };
-		539359292388665500D77FD1 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358CA2388665400D77FD1 /* Media.swift */; };
-		5393592A2388665500D77FD1 /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358CB2388665400D77FD1 /* Accounts.swift */; };
-		5393592B2388665500D77FD1 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358CC2388665400D77FD1 /* Lists.swift */; };
-		5393592C2388665500D77FD1 /* Reports.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358CD2388665400D77FD1 /* Reports.swift */; };
-		5393592D2388665500D77FD1 /* Clients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358CE2388665400D77FD1 /* Clients.swift */; };
-		5393592E2388665500D77FD1 /* DomainBlocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358CF2388665400D77FD1 /* DomainBlocks.swift */; };
-		5393592F2388665500D77FD1 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D02388665400D77FD1 /* Search.swift */; };
-		539359302388665500D77FD1 /* Timelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D12388665400D77FD1 /* Timelines.swift */; };
-		539359312388665500D77FD1 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D22388665400D77FD1 /* Pagination.swift */; };
-		539359322388665500D77FD1 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D32388665400D77FD1 /* Client.swift */; };
-		539359332388665500D77FD1 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D42388665400D77FD1 /* Request.swift */; };
-		539359342388665500D77FD1 /* RequestRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D52388665400D77FD1 /* RequestRange.swift */; };
-		539359352388665500D77FD1 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D62388665400D77FD1 /* ClientError.swift */; };
-		539359362388665500D77FD1 /* Payload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D72388665400D77FD1 /* Payload.swift */; };
-		539359372388665500D77FD1 /* MediaAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358D82388665400D77FD1 /* MediaAttachment.swift */; };
-		539359382388665500D77FD1 /* EMTLoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358DB2388665400D77FD1 /* EMTLoadingIndicator.swift */; };
-		539359392388665500D77FD1 /* EMTTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539358DC2388665400D77FD1 /* EMTTimer.swift */; };
-		5393593A2388665500D77FD1 /* waitIndicatorGraphic-13@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358DE2388665400D77FD1 /* waitIndicatorGraphic-13@2x.png */; };
-		5393593B2388665500D77FD1 /* waitIndicatorGraphic-25@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358DF2388665400D77FD1 /* waitIndicatorGraphic-25@2x.png */; };
-		5393593C2388665500D77FD1 /* waitIndicatorGraphic-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E02388665400D77FD1 /* waitIndicatorGraphic-29@2x.png */; };
-		5393593D2388665500D77FD1 /* waitIndicatorGraphic-7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E12388665400D77FD1 /* waitIndicatorGraphic-7@2x.png */; };
-		5393593E2388665500D77FD1 /* waitIndicatorGraphic-9@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E22388665400D77FD1 /* waitIndicatorGraphic-9@2x.png */; };
-		5393593F2388665500D77FD1 /* waitIndicatorGraphic-5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E32388665400D77FD1 /* waitIndicatorGraphic-5@2x.png */; };
-		539359402388665500D77FD1 /* waitIndicatorGraphic-11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E42388665400D77FD1 /* waitIndicatorGraphic-11@2x.png */; };
-		539359412388665500D77FD1 /* waitIndicatorGraphic-27@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E52388665400D77FD1 /* waitIndicatorGraphic-27@2x.png */; };
-		539359422388665500D77FD1 /* waitIndicatorGraphic-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E62388665400D77FD1 /* waitIndicatorGraphic-1@2x.png */; };
-		539359432388665500D77FD1 /* waitIndicatorGraphic-23@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E72388665400D77FD1 /* waitIndicatorGraphic-23@2x.png */; };
-		539359442388665500D77FD1 /* waitIndicatorGraphic-19@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E82388665400D77FD1 /* waitIndicatorGraphic-19@2x.png */; };
-		539359452388665500D77FD1 /* waitIndicatorGraphic-15@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358E92388665400D77FD1 /* waitIndicatorGraphic-15@2x.png */; };
-		539359462388665500D77FD1 /* waitIndicatorGraphic-21@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358EA2388665400D77FD1 /* waitIndicatorGraphic-21@2x.png */; };
-		539359472388665500D77FD1 /* waitIndicatorGraphic-17@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358EB2388665400D77FD1 /* waitIndicatorGraphic-17@2x.png */; };
-		539359482388665500D77FD1 /* waitIndicatorGraphic-3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358EC2388665400D77FD1 /* waitIndicatorGraphic-3@2x.png */; };
-		539359492388665500D77FD1 /* waitIndicatorGraphic-6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358ED2388665400D77FD1 /* waitIndicatorGraphic-6@2x.png */; };
-		5393594A2388665500D77FD1 /* waitIndicatorGraphic-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358EE2388665400D77FD1 /* waitIndicatorGraphic-24@2x.png */; };
-		5393594B2388665500D77FD1 /* waitIndicatorGraphic-28@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358EF2388665400D77FD1 /* waitIndicatorGraphic-28@2x.png */; };
-		5393594C2388665500D77FD1 /* waitIndicatorGraphic-12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F02388665400D77FD1 /* waitIndicatorGraphic-12@2x.png */; };
-		5393594D2388665500D77FD1 /* waitIndicatorGraphic-26@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F12388665400D77FD1 /* waitIndicatorGraphic-26@2x.png */; };
-		5393594E2388665500D77FD1 /* waitIndicatorGraphic-10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F22388665400D77FD1 /* waitIndicatorGraphic-10@2x.png */; };
-		5393594F2388665500D77FD1 /* waitIndicatorGraphic-8@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F32388665400D77FD1 /* waitIndicatorGraphic-8@2x.png */; };
-		539359502388665500D77FD1 /* waitIndicatorGraphic-4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F42388665400D77FD1 /* waitIndicatorGraphic-4@2x.png */; };
-		539359512388665500D77FD1 /* waitIndicatorGraphic-18@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F52388665400D77FD1 /* waitIndicatorGraphic-18@2x.png */; };
-		539359522388665500D77FD1 /* waitIndicatorGraphic-14@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F62388665400D77FD1 /* waitIndicatorGraphic-14@2x.png */; };
-		539359532388665500D77FD1 /* waitIndicatorGraphic-22@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F72388665400D77FD1 /* waitIndicatorGraphic-22@2x.png */; };
-		539359542388665500D77FD1 /* waitIndicatorGraphic-0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F82388665400D77FD1 /* waitIndicatorGraphic-0@2x.png */; };
-		539359552388665500D77FD1 /* waitIndicatorGraphic-2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358F92388665400D77FD1 /* waitIndicatorGraphic-2@2x.png */; };
-		539359562388665500D77FD1 /* waitIndicatorGraphic-16@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358FA2388665400D77FD1 /* waitIndicatorGraphic-16@2x.png */; };
-		539359572388665500D77FD1 /* waitIndicatorGraphic-20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 539358FB2388665400D77FD1 /* waitIndicatorGraphic-20@2x.png */; };
-		5393595A238866B400D77FD1 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53935958238866B400D77FD1 /* Interface.storyboard */; };
 		5393595E23886B6400D77FD1 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393595D23886B6400D77FD1 /* WatchSessionManager.swift */; };
-		5393595F23886B7500D77FD1 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5393595D23886B6400D77FD1 /* WatchSessionManager.swift */; };
-		5393596023886D6D00D77FD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53449D3923293E3700A470E2 /* Assets.xcassets */; };
 		53935B10238AF94C00D77FD1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 53935B12238AF94C00D77FD1 /* Localizable.strings */; };
 		53955D7723746F0400522101 /* HashtagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53955D7623746F0400522101 /* HashtagViewController.swift */; };
 		53955D792374887700522101 /* BrowserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53955D782374887700522101 /* BrowserSettingsViewController.swift */; };
@@ -656,24 +546,9 @@
 		53DED14C234B59C90017534F /* PinnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DED14B234B59C90017534F /* PinnedViewController.swift */; };
 		53DED14E234B71280017534F /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DED14D234B71280017534F /* LikedViewController.swift */; };
 		6427A50145F216B989F00A74 /* Pods_Mast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEAFB3EAA11416A97855DF0 /* Pods_Mast.framework */; };
-		A679B3B524E1BDC00092F567 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A679B3B424E1BDC00092F567 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		53935868238865BB00D77FD1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53449D2523293E3600A470E2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53935865238865BB00D77FD1;
-			remoteInfo = "MastWatch Extension";
-		};
-		53935875238865BC00D77FD1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 53449D2523293E3600A470E2 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53935859238865B800D77FD1;
-			remoteInfo = MastWatch;
-		};
 		53B5F1E0233BC4BA0099B170 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 53449D2523293E3600A470E2 /* Project object */;
@@ -690,20 +565,8 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				53935877238865BC00D77FD1 /* Chatterly.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5393587B238865BC00D77FD1 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				53935867238865BB00D77FD1 /* Chatterly.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		53B5F1E3233BC4BA0099B170 /* Embed App Extensions */ = {
@@ -1253,9 +1116,7 @@
 		5379F4352334CAE800DC1F33 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		5393584F2385C47200D77FD1 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
 		539358512385C47200D77FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5393585A238865B800D77FD1 /* Chatterly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatterly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53935861238865BB00D77FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		53935866238865BB00D77FD1 /* Chatterly.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Chatterly.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		53935871238865BC00D77FD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53935873238865BC00D77FD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53935874238865BC00D77FD1 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -1641,21 +1502,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53935863238865BB00D77FD1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53B5F1D8233BC4BA0099B170 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		718827F6D5FFD4019776BA28 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -2047,8 +1894,6 @@
 			children = (
 				53449D2D23293E3600A470E2 /* Chatterly.app */,
 				53B5F1DB233BC4BA0099B170 /* Chatterly Push.appex */,
-				5393585A238865B800D77FD1 /* Chatterly.app */,
-				53935866238865BB00D77FD1 /* Chatterly.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -3324,7 +3169,6 @@
 			);
 			dependencies = (
 				53B5F1E1233BC4BA0099B170 /* PBXTargetDependency */,
-				53935876238865BC00D77FD1 /* PBXTargetDependency */,
 			);
 			name = Mast;
 			packageProductDependencies = (
@@ -3334,41 +3178,6 @@
 			productName = Mast;
 			productReference = 53449D2D23293E3600A470E2 /* Chatterly.app */;
 			productType = "com.apple.product-type.application";
-		};
-		53935859238865B800D77FD1 /* MastWatch */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5393587F238865BC00D77FD1 /* Build configuration list for PBXNativeTarget "MastWatch" */;
-			buildPhases = (
-				53935858238865B800D77FD1 /* Resources */,
-				5393587B238865BC00D77FD1 /* Embed App Extensions */,
-				718827F6D5FFD4019776BA28 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				53935869238865BB00D77FD1 /* PBXTargetDependency */,
-			);
-			name = MastWatch;
-			productName = MastWatch;
-			productReference = 5393585A238865B800D77FD1 /* Chatterly.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		53935865238865BB00D77FD1 /* MastWatch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5393587E238865BC00D77FD1 /* Build configuration list for PBXNativeTarget "MastWatch Extension" */;
-			buildPhases = (
-				53935862238865BB00D77FD1 /* Sources */,
-				53935863238865BB00D77FD1 /* Frameworks */,
-				53935864238865BB00D77FD1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "MastWatch Extension";
-			productName = "MastWatch Extension";
-			productReference = 53935866238865BB00D77FD1 /* Chatterly.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
 		};
 		53B5F1DA233BC4BA0099B170 /* Mast Push */ = {
 			isa = PBXNativeTarget;
@@ -3401,13 +3210,6 @@
 					53449D2C23293E3600A470E2 = {
 						CreatedOnToolsVersion = 11.0;
 					};
-					53935859238865B800D77FD1 = {
-						CreatedOnToolsVersion = 11.1;
-					};
-					53935865238865BB00D77FD1 = {
-						CreatedOnToolsVersion = 11.1;
-						LastSwiftMigration = 1110;
-					};
 					53B5F1DA233BC4BA0099B170 = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -3438,8 +3240,6 @@
 			targets = (
 				53449D2C23293E3600A470E2 /* Mast */,
 				53B5F1DA233BC4BA0099B170 /* Mast Push */,
-				53935859238865B800D77FD1 /* MastWatch */,
-				53935865238865BB00D77FD1 /* MastWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -3577,54 +3377,6 @@
 				53A4F48A2377171600EC12C6 /* icon12.png in Resources */,
 				5310219A239BCA5A00478B33 /* icon37.png in Resources */,
 				53A4F4E823771FD800EC12C6 /* icon22.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53935858238865B800D77FD1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A679B3B524E1BDC00092F567 /* Assets.xcassets in Resources */,
-				5393595A238866B400D77FD1 /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		53935864238865BB00D77FD1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5393593B2388665500D77FD1 /* waitIndicatorGraphic-25@2x.png in Resources */,
-				5393594E2388665500D77FD1 /* waitIndicatorGraphic-10@2x.png in Resources */,
-				5393593A2388665500D77FD1 /* waitIndicatorGraphic-13@2x.png in Resources */,
-				539359502388665500D77FD1 /* waitIndicatorGraphic-4@2x.png in Resources */,
-				539359402388665500D77FD1 /* waitIndicatorGraphic-11@2x.png in Resources */,
-				539359562388665500D77FD1 /* waitIndicatorGraphic-16@2x.png in Resources */,
-				5393593E2388665500D77FD1 /* waitIndicatorGraphic-9@2x.png in Resources */,
-				53935872238865BC00D77FD1 /* Assets.xcassets in Resources */,
-				539359542388665500D77FD1 /* waitIndicatorGraphic-0@2x.png in Resources */,
-				5393593D2388665500D77FD1 /* waitIndicatorGraphic-7@2x.png in Resources */,
-				5393594A2388665500D77FD1 /* waitIndicatorGraphic-24@2x.png in Resources */,
-				539359442388665500D77FD1 /* waitIndicatorGraphic-19@2x.png in Resources */,
-				539359452388665500D77FD1 /* waitIndicatorGraphic-15@2x.png in Resources */,
-				5393593C2388665500D77FD1 /* waitIndicatorGraphic-29@2x.png in Resources */,
-				539359572388665500D77FD1 /* waitIndicatorGraphic-20@2x.png in Resources */,
-				539359552388665500D77FD1 /* waitIndicatorGraphic-2@2x.png in Resources */,
-				5393593F2388665500D77FD1 /* waitIndicatorGraphic-5@2x.png in Resources */,
-				5393594D2388665500D77FD1 /* waitIndicatorGraphic-26@2x.png in Resources */,
-				5393594C2388665500D77FD1 /* waitIndicatorGraphic-12@2x.png in Resources */,
-				539359522388665500D77FD1 /* waitIndicatorGraphic-14@2x.png in Resources */,
-				539359492388665500D77FD1 /* waitIndicatorGraphic-6@2x.png in Resources */,
-				539359482388665500D77FD1 /* waitIndicatorGraphic-3@2x.png in Resources */,
-				5393594B2388665500D77FD1 /* waitIndicatorGraphic-28@2x.png in Resources */,
-				539359422388665500D77FD1 /* waitIndicatorGraphic-1@2x.png in Resources */,
-				539359462388665500D77FD1 /* waitIndicatorGraphic-21@2x.png in Resources */,
-				539359412388665500D77FD1 /* waitIndicatorGraphic-27@2x.png in Resources */,
-				539359512388665500D77FD1 /* waitIndicatorGraphic-18@2x.png in Resources */,
-				539359472388665500D77FD1 /* waitIndicatorGraphic-17@2x.png in Resources */,
-				539359432388665500D77FD1 /* waitIndicatorGraphic-23@2x.png in Resources */,
-				539359532388665500D77FD1 /* waitIndicatorGraphic-22@2x.png in Resources */,
-				5393596023886D6D00D77FD1 /* Assets.xcassets in Resources */,
-				5393594F2388665500D77FD1 /* waitIndicatorGraphic-8@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -4087,88 +3839,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53935862238865BB00D77FD1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				539359072388665400D77FD1 /* DateFormatter.swift in Sources */,
-				539358FD2388665400D77FD1 /* ClientType.swift in Sources */,
-				539359122388665400D77FD1 /* AccessScope.swift in Sources */,
-				5393590B2388665400D77FD1 /* AttachmentType.swift in Sources */,
-				5393592D2388665500D77FD1 /* Clients.swift in Sources */,
-				539359082388665400D77FD1 /* HTTPURLResponse.swift in Sources */,
-				539359272388665500D77FD1 /* Blocks.swift in Sources */,
-				539359152388665400D77FD1 /* Context.swift in Sources */,
-				5393590D2388665400D77FD1 /* Attachment.swift in Sources */,
-				539359372388665500D77FD1 /* MediaAttachment.swift in Sources */,
-				539359132388665400D77FD1 /* Results.swift in Sources */,
-				5393591A2388665400D77FD1 /* Status.swift in Sources */,
-				5393590F2388665400D77FD1 /* ClientApplication.swift in Sources */,
-				539359242388665400D77FD1 /* FollowRequests.swift in Sources */,
-				539359212388665400D77FD1 /* Mutes.swift in Sources */,
-				539358962388664000D77FD1 /* ExtensionDelegate.swift in Sources */,
-				539359062388665400D77FD1 /* String.swift in Sources */,
-				539359092388665400D77FD1 /* Report.swift in Sources */,
-				539359252388665500D77FD1 /* Login.swift in Sources */,
-				539358912388664000D77FD1 /* TimelineRow.swift in Sources */,
-				5393591E2388665400D77FD1 /* NotificationType.swift in Sources */,
-				539359102388665400D77FD1 /* Card.swift in Sources */,
-				539358FF2388665400D77FD1 /* Functions.swift in Sources */,
-				539359172388665400D77FD1 /* Relationship.swift in Sources */,
-				539359382388665500D77FD1 /* EMTLoadingIndicator.swift in Sources */,
-				5393588E2388664000D77FD1 /* FedTimelineController.swift in Sources */,
-				5393588F2388664000D77FD1 /* Date.swift in Sources */,
-				539359112388665400D77FD1 /* LoginSettings.swift in Sources */,
-				5393590A2388665400D77FD1 /* Mention.swift in Sources */,
-				539358932388664000D77FD1 /* DetailRow.swift in Sources */,
-				5393591B2388665400D77FD1 /* Emoji.swift in Sources */,
-				539359052388665400D77FD1 /* Decodable.swift in Sources */,
-				539359042388665400D77FD1 /* Data.swift in Sources */,
-				539358FE2388665400D77FD1 /* Parameter.swift in Sources */,
-				539358902388664000D77FD1 /* StoreStruct.swift in Sources */,
-				539359012388665400D77FD1 /* URLComponents.swift in Sources */,
-				5393590C2388665400D77FD1 /* Visibility.swift in Sources */,
-				539359202388665400D77FD1 /* HTTPMethod.swift in Sources */,
-				539358922388664000D77FD1 /* DetailController.swift in Sources */,
-				5393595F23886B7500D77FD1 /* WatchSessionManager.swift in Sources */,
-				5393590E2388665400D77FD1 /* Empty.swift in Sources */,
-				539359362388665500D77FD1 /* Payload.swift in Sources */,
-				5393591F2388665400D77FD1 /* RequestError.swift in Sources */,
-				5393591D2388665400D77FD1 /* Account.swift in Sources */,
-				539359282388665500D77FD1 /* Notifications.swift in Sources */,
-				539359332388665500D77FD1 /* Request.swift in Sources */,
-				539359292388665500D77FD1 /* Media.swift in Sources */,
-				5393592B2388665500D77FD1 /* Lists.swift in Sources */,
-				539358952388664000D77FD1 /* NotificationController.swift in Sources */,
-				5393588D2388664000D77FD1 /* InterfaceController.swift in Sources */,
-				539359262388665500D77FD1 /* Favourites.swift in Sources */,
-				539358982388664000D77FD1 /* TootController.swift in Sources */,
-				539358FC2388665400D77FD1 /* PaginationItem.swift in Sources */,
-				539359182388665400D77FD1 /* Notification.swift in Sources */,
-				539359302388665500D77FD1 /* Timelines.swift in Sources */,
-				539359392388665500D77FD1 /* EMTTimer.swift in Sources */,
-				539359022388665400D77FD1 /* CharacterSet.swift in Sources */,
-				539359312388665500D77FD1 /* Pagination.swift in Sources */,
-				5393592A2388665500D77FD1 /* Accounts.swift in Sources */,
-				539359002388665400D77FD1 /* Result.swift in Sources */,
-				539359352388665500D77FD1 /* ClientError.swift in Sources */,
-				539359192388665400D77FD1 /* Application.swift in Sources */,
-				539359222388665400D77FD1 /* Instances.swift in Sources */,
-				539359232388665400D77FD1 /* Statuses.swift in Sources */,
-				539358972388664000D77FD1 /* LocalTimelineController.swift in Sources */,
-				539359342388665500D77FD1 /* RequestRange.swift in Sources */,
-				539358942388664000D77FD1 /* ProfileController.swift in Sources */,
-				5393592C2388665500D77FD1 /* Reports.swift in Sources */,
-				539359032388665400D77FD1 /* URLRequest.swift in Sources */,
-				5393591C2388665400D77FD1 /* Tag.swift in Sources */,
-				5393592E2388665500D77FD1 /* DomainBlocks.swift in Sources */,
-				539359322388665500D77FD1 /* Client.swift in Sources */,
-				5393592F2388665500D77FD1 /* Search.swift in Sources */,
-				539359162388665400D77FD1 /* Instance.swift in Sources */,
-				539359142388665400D77FD1 /* List.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		53B5F1D7233BC4BA0099B170 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -4185,17 +3855,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		53935869238865BB00D77FD1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 53935865238865BB00D77FD1 /* MastWatch Extension */;
-			targetProxy = 53935868238865BB00D77FD1 /* PBXContainerItemProxy */;
-		};
-		53935876238865BC00D77FD1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			platformFilter = ios;
-			target = 53935859238865B800D77FD1 /* MastWatch */;
-			targetProxy = 53935875238865BC00D77FD1 /* PBXContainerItemProxy */;
-		};
 		53B5F1E1233BC4BA0099B170 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 53B5F1DA233BC4BA0099B170 /* Mast Push */;
@@ -4347,7 +4006,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -4402,7 +4061,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -4423,6 +4082,7 @@
 				CURRENT_PROJECT_VERSION = 3.0.1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = M6C9Q4TQB5;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = Mast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4463,6 +4123,7 @@
 				CURRENT_PROJECT_VERSION = 3.0.1;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = M6C9Q4TQB5;
+				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
 				INFOPLIST_FILE = Mast/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -4489,113 +4150,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Mast/Mast2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		53935879238865BC00D77FD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MastWatch/MastWatch.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
-				DEVELOPMENT_TEAM = M6C9Q4TQB5;
-				IBSC_MODULE = MastWatch_Extension;
-				INFOPLIST_FILE = MastWatch/Info.plist;
-				MARKETING_VERSION = 3.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.chatterly.mobile.watchkitapp;
-				PRODUCT_NAME = Chatterly;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		5393587A238865BC00D77FD1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = MastWatch/MastWatch.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
-				DEVELOPMENT_TEAM = M6C9Q4TQB5;
-				IBSC_MODULE = MastWatch_Extension;
-				INFOPLIST_FILE = MastWatch/Info.plist;
-				MARKETING_VERSION = 3.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.chatterly.mobile.watchkitapp;
-				PRODUCT_NAME = Chatterly;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Release;
-		};
-		5393587C238865BC00D77FD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "MastWatch Extension/MastWatch Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
-				DEVELOPMENT_TEAM = M6C9Q4TQB5;
-				INFOPLIST_FILE = "MastWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 3.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.chatterly.mobile.watchkitapp.watchkitextension12;
-				PRODUCT_NAME = Chatterly;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MastWatch Extension/MastWatch Extension-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
-			};
-			name = Debug;
-		};
-		5393587D238865BC00D77FD1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "MastWatch Extension/MastWatch Extension.entitlements";
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
-				DEVELOPMENT_TEAM = M6C9Q4TQB5;
-				INFOPLIST_FILE = "MastWatch Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 3.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = me.chatterly.mobile.watchkitapp.watchkitextension12;
-				PRODUCT_NAME = Chatterly;
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "MastWatch Extension/MastWatch Extension-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 6.0;
 			};
 			name = Release;
 		};
@@ -4668,24 +4222,6 @@
 			buildConfigurations = (
 				53449D4223293E3700A470E2 /* Debug */,
 				53449D4323293E3700A470E2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5393587E238865BC00D77FD1 /* Build configuration list for PBXNativeTarget "MastWatch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5393587C238865BC00D77FD1 /* Debug */,
-				5393587D238865BC00D77FD1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5393587F238865BC00D77FD1 /* Build configuration list for PBXNativeTarget "MastWatch" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53935879238865BC00D77FD1 /* Debug */,
-				5393587A238865BC00D77FD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

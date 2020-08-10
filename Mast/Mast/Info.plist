@@ -1122,17 +1122,17 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppleMusicUsageDescription</key>
-	<string>Allow Mast to access your media to determine what song is currently playing.</string>
+	<string>Allow Chatterly to access your media to determine what song is currently playing.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Allow Mast to access your Camera and Photo Library.</string>
+	<string>Allow Chatterly to access your Camera and Photo Library.</string>
 	<key>NSFaceIDUsageDescription</key>
-	<string>Mast requires Face ID permission to authenticate using Face recognition.</string>
+	<string>Chatterly requires Face ID permission to authenticate using Face recognition.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Allow Mast to access your microphone.</string>
+	<string>Allow Chatterly to access your microphone.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Allow Mast to access your camera roll.</string>
+	<string>Allow Chatterly to access your camera roll.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Allow Mast to access your Photo Library.</string>
+	<string>Allow Chatterly to access your Photo Library.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
