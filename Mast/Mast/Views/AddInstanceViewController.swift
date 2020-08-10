@@ -219,7 +219,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
     }
     
     func fetchAltInstances() {
-        let urlStr = "https://api.chatterly.me/chattery/api/1.0/instances/list?count=\(100)&include_closed=\(false)&include_down=\(false)"
+        let urlStr = "http://roxxonusa.com/chatterly.json"
         let url: URL = URL(string: urlStr)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -240,8 +240,6 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                 }
             } catch {
                 print("err")
-                self.altInstances.insert("chatterly.me", at: 0)
-                self.tableView.reloadData()
             }
         }
         task.resume()

@@ -13,33 +13,8 @@ import SwiftyStoreKit
 
 class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var tableView = UITableView()
-    var bgView = UIView()
-    let firstSection = ["Your contribution goes a long way".localized]
-    let firstSectionDescriptions = ["\nThe tip jar helps keep Mast running, and supports the developer in getting awesome updates to you.\n\nVersion 2 was entirely re-written from the ground up with a whole new design (and is what you're seeing here).\n\nIf you enjoy using this app and want to support the developer (that's me, Shihab - a young indie developer trying his best to make cool products), please consider one of the tip jar options below.\n\nThank you for being awesome!".localized]
-    let firstSectionImage = ["heart"]
-    var button1 = UIButton()
-    var button1Title = UILabel()
-    var button1Title2 = UILabel()
-    var button2 = UIButton()
-    var button2Title = UILabel()
-    var button2Title2 = UILabel()
-    var tandc = UILabel()
-    var button4 = UIButton()
-    var button5 = UIButton()
-    let starButton = UIButton()
-    let tandctext = "The tip jar is either an auto-renewing subscription, or a one-off payment.".localized
-    
-    var productID = ""
-    var lifetimeProduct : SKProduct?
-    var annualProduct : SKProduct?
-    var monthlyProduct : SKProduct?
-    var price1 = "---"
-    var price2 = "---"
-    var price3 = "---"
-    
-    var shouldShowX: Bool = false
-    
+    var tableView = UITableView()hjugh
+    var shouldShowX: Bool = falseg
     override func viewDidLayoutSubviews() {
         self.tableView.frame = CGRect(x: self.view.safeAreaInsets.left, y: 0, width: self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right, height: self.view.bounds.height - 210)
         self.bgView.frame = CGRect(x: 0, y: self.view.bounds.height - 210, width: self.view.bounds.width - self.view.safeAreaInsets.left - self.view.safeAreaInsets.right, height: 210)
@@ -196,14 +171,14 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
         
         let alert = UIAlertController(title: nil, message: self.tandctext, preferredStyle: .actionSheet)
         let a1 = UIAlertAction(title: "Privacy Policy".localized, style: .default , handler:{ (UIAlertAction) in
-            let z = URL(string: "https://www.allegoryapp.info/privacy")!
+            let z = URL(string: "https://about.chatterly.me/privacy")!
             UIApplication.shared.open(z)
         })
         a1.setValue(UIImage(systemName: "link")!, forKey: "image")
         a1.setValue(CATextLayerAlignmentMode.left, forKey: "titleTextAlignment")
         alert.addAction(a1)
         let a2 = UIAlertAction(title: "Terms of Service".localized, style: .default , handler:{ (UIAlertAction) in
-            let z = URL(string: "https://www.allegoryapp.info/terms")!
+            let z = URL(string: "https://about.chatterly.me/terms")!
             UIApplication.shared.open(z)
         })
         a2.setValue(UIImage(systemName: "link")!, forKey: "image")
