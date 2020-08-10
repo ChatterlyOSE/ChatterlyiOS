@@ -2527,7 +2527,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
         self.textField.autocapitalizationType = .none
         self.textField.keyboardType = .URL
         self.textField.delegate = self
-        self.textField.attributedPlaceholder = NSAttributedString(string: "Instance name...",
+        self.textField.attributedPlaceholder = NSAttributedString(string: "Enter Server URL or click Chatterly.me below",
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray.withAlphaComponent(0.45)])
         self.textField.accessibilityLabel = "Enter Instance Name".localized
         UIApplication.shared.windows.first?.addSubview(self.textField)
@@ -2551,7 +2551,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
     }
     
     func fetchAltInstances() {
-        let urlStr = "https://instances.social/api/1.0/instances/list?count=\(100)&include_closed=\(false)&include_down=\(false)"
+        let urlStr = "https://roxxonusa.com/chatterly.json"
         let url: URL = URL(string: urlStr)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -2567,9 +2567,6 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                     _ = json.instances.map ({ x in
                         self.altInstances.append(x.name)
                     })
-                    self.altInstances.insert("social.nofftopia.com", at: 0)
-                    self.altInstances.insert("mastodon.technology", at: 0)
-                    self.altInstances.insert("mastodon.social", at: 0)
                     self.tableViewIntro.reloadData()
                 }
             } catch {
@@ -2594,7 +2591,7 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
             vw.backgroundColor = .clear
             let title = UILabel()
             title.frame = CGRect(x: (UIApplication.shared.windows.first?.safeAreaInsets.left ?? 0) + 10, y: 0, width: self.view.bounds.width - 20, height: 60)
-            title.text = "Pick the instance you'd like to add an account from"
+            title.text = "Click on Chatterly to login, or if you're using ChatterlyOSE, please enter your server URL."
             title.textColor = UIColor(named: "baseBlack")!.withAlphaComponent(0.25)
             title.font = UIFont.systemFont(ofSize: 14)
             title.numberOfLines = 0
@@ -2627,14 +2624,14 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                         clientName: "Mast",
                         redirectURI: "me.chatterly.mobile://addNewInstance",
                         scopes: [.read, .write, .follow, .push],
-                        website: "https://twitter.com/jpeguin"
+                        website: "https://twitter.com/usechatterly"
                     )
                     GlobalStruct.client.run(request) { (application) in
                         if application.value == nil {
                             DispatchQueue.main.async {
-                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like mastodon.social or mastodon.technology, or use one from the list to get started. You can sign in if you already have an account registered with the instance, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
+                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like chatterly.me to get started. You can sign in if you already have a Chatterly account, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
                                 let op1 = UIAlertAction(title: "Find out more".localized, style: .default , handler:{ (UIAlertAction) in
-                                    let queryURL = URL(string: "https://joinmastodon.org")!
+                                    let queryURL = URL(string: "https://chatterly.me")!
                                     UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
                                         if !success {
                                             UIApplication.shared.open(queryURL)
@@ -2680,14 +2677,14 @@ class FirstViewController: UIViewController, UITextFieldDelegate, UITableViewDat
                         clientName: "Mast",
                         redirectURI: "me.chatterly.mobile://success",
                         scopes: [.read, .write, .follow, .push],
-                        website: "https://twitter.com/jpeguin"
+                        website: "https://twitter.com/usechatterly"
                     )
                     GlobalStruct.client.run(request) { (application) in
                         if application.value == nil {
                             DispatchQueue.main.async {
-                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like mastodon.social or mastodon.technology, or use one from the list to get started. You can sign in if you already have an account registered with the instance, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
+                                let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like chatterly.me to get started. You can sign in if you already have a Chatterly account, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
                                 let op1 = UIAlertAction(title: "Find out more".localized, style: .default , handler:{ (UIAlertAction) in
-                                    let queryURL = URL(string: "https://joinmastodon.org")!
+                                    let queryURL = URL(string: "https://chatterly.me")!
                                     UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
                                         if !success {
                                             UIApplication.shared.open(queryURL)

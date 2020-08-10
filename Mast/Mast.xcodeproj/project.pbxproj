@@ -546,6 +546,8 @@
 		53DED14C234B59C90017534F /* PinnedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DED14B234B59C90017534F /* PinnedViewController.swift */; };
 		53DED14E234B71280017534F /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DED14D234B71280017534F /* LikedViewController.swift */; };
 		6427A50145F216B989F00A74 /* Pods_Mast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BEAFB3EAA11416A97855DF0 /* Pods_Mast.framework */; };
+		A6F0670024E1EC29006CD604 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F066FF24E1EC29006CD604 /* AudioToolbox.framework */; };
+		A6F0670224E1EC34006CD604 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6F0670124E1EC34006CD604 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1488,6 +1490,8 @@
 		5BEAFB3EAA11416A97855DF0 /* Pods_Mast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		867069C523A7C06EBBAB0C75 /* Pods-Mast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mast.release.xcconfig"; path = "Target Support Files/Pods-Mast/Pods-Mast.release.xcconfig"; sourceTree = "<group>"; };
 		A679B3B424E1BDC00092F567 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6F066FF24E1EC29006CD604 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A6F0670124E1EC34006CD604 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1497,6 +1501,8 @@
 			files = (
 				535F1BC3244B5BC700826BC8 /* SDWebImage in Frameworks */,
 				6427A50145F216B989F00A74 /* Pods_Mast.framework in Frameworks */,
+				A6F0670024E1EC29006CD604 /* AudioToolbox.framework in Frameworks */,
+				A6F0670224E1EC34006CD604 /* CloudKit.framework in Frameworks */,
 				535F1BC5244B5BDC00826BC8 /* SDWebImageMapKit in Frameworks */,
 				53488E7E23941E0E00528141 /* StoreKit.framework in Frameworks */,
 			);
@@ -3143,6 +3149,8 @@
 		DFF9E889BA3C59F8B8C4094A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6F0670124E1EC34006CD604 /* CloudKit.framework */,
+				A6F066FF24E1EC29006CD604 /* AudioToolbox.framework */,
 				53488E7D23941E0E00528141 /* StoreKit.framework */,
 				5BEAFB3EAA11416A97855DF0 /* Pods_Mast.framework */,
 				53733C0C2382B3E9006F260E /* NotificationCenter.framework */,
@@ -4079,7 +4087,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mast/Mast.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 3.0.3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = M6C9Q4TQB5;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -4089,7 +4097,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -4120,7 +4128,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Mast/Mast.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 3.0.3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = M6C9Q4TQB5;
 				"ENABLE_HARDENED_RUNTIME[sdk=macosx*]" = YES;
@@ -4130,7 +4138,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.3;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-framework",
@@ -4158,7 +4166,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Mast Push/Mast Push.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 3.0.3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = M6C9Q4TQB5;
 				INFOPLIST_FILE = "Mast Push/Info.plist";
@@ -4168,7 +4176,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.chatterly.mobile.Mast-Push";
 				PRODUCT_NAME = "Chatterly Push";
 				SKIP_INSTALL = YES;
@@ -4184,7 +4192,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Mast Push/Mast Push.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3.0.1;
+				CURRENT_PROJECT_VERSION = 3.0.3;
 				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO;
 				DEVELOPMENT_TEAM = M6C9Q4TQB5;
 				INFOPLIST_FILE = "Mast Push/Info.plist";
@@ -4194,7 +4202,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "me.chatterly.mobile.Mast-Push";
 				PRODUCT_NAME = "Chatterly Push";
 				SKIP_INSTALL = YES;

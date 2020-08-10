@@ -50,7 +50,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
         self.createLoginView(newInstance: true)
         
         self.view.backgroundColor = UIColor(named: "lighterBaseWhite")
-        self.title = "Add New Instance".localized
+        self.title = "Add an Account"
         
         self.navigationController?.navigationBar.prefersLargeTitles = false
         self.navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor(named: "baseBlack")!]
@@ -175,9 +175,9 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
         GlobalStruct.newClient.run(request) { (application) in
             if application.value == nil {
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like mastodon.social or mastodon.technology, or use one from the list to get started. You can sign in if you already have an account registered with the instance, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
+                    let alert = UIAlertController(title: "Not a valid instance (may be closed or dead)", message: "Please enter an instance name like chatterly.me to get started. You can sign in if you already have a Chatterly account, or you can choose to sign up with a new account.", preferredStyle: .actionSheet)
                     let op1 = UIAlertAction(title: "Find out more".localized, style: .default , handler:{ (UIAlertAction) in
-                        let queryURL = URL(string: "https://joinmastodon.org")!
+                        let queryURL = URL(string: "https://chatterly.me")!
                         UIApplication.shared.open(queryURL, options: [.universalLinksOnly: true]) { (success) in
                             if !success {
                                 UIApplication.shared.open(queryURL)
@@ -219,7 +219,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
     }
     
     func fetchAltInstances() {
-        let urlStr = "http://roxxonusa.com/chatterly.json"
+        let urlStr = "https://roxxonusa.com/chatterly.json"
         let url: URL = URL(string: urlStr)!
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -235,7 +235,6 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                     _ = json.instances.map ({ x in
                         self.altInstances.append(x.name)
                     })
-                    self.altInstances.insert("chatterly.me", at: 0)
                     self.tableView.reloadData()
                 }
             } catch {
@@ -274,7 +273,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
         self.textField.autocapitalizationType = .none
         self.textField.keyboardType = .URL
         self.textField.delegate = self
-        self.textField.attributedPlaceholder = NSAttributedString(string: "Instance name...",
+        self.textField.attributedPlaceholder = NSAttributedString(string: "Server URL",
                                                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray.withAlphaComponent(0.45)])
         self.textField.accessibilityLabel = "Enter Instance Name".localized
         self.view.addSubview(self.textField)
@@ -347,7 +346,7 @@ class AddInstanceViewController: UIViewController, UITextFieldDelegate, UITableV
                         clientName: "Mast",
                         redirectURI: "me.chatterly.mobile://success",
                         scopes: [.read, .write, .follow, .push],
-                        website: "https://twitter.com/jpeguin"
+                        website: "https://twitter.com/usechatterly"
                     )
                     GlobalStruct.client.run(request) { (application) in
                         if application.value == nil {

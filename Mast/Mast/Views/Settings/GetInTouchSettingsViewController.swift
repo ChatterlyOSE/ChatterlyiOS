@@ -14,8 +14,8 @@ import MessageUI
 class GetInTouchSettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate {
     
     var tableView = UITableView()
-    let firstSection = ["\("Mast \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "")") Twitter", "Developer Twitter"]
-    let secondSection = ["\("Mast \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "")") Website", "Developer Website"]
+    let firstSection = ["\("Chatterly Mobile \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "")") Twitter", "Developer Twitter"]
+    let secondSection = ["\("Chatterly Mobile \(Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") ?? "")") Website", "Developer Website"]
     let thirdSection = ["Email"]
     var safariVC: SFSafariViewController?
     
@@ -86,8 +86,8 @@ class GetInTouchSettingsViewController: UIViewController, UITableViewDataSource,
         
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                let twUrl = URL(string: "twitter://user?screen_name=TheMastApp")!
-                let twUrlWeb = URL(string: "https://www.twitter.com/TheMastApp")!
+                let twUrl = URL(string: "twitter://user?screen_name=UseChatterly")!
+                let twUrlWeb = URL(string: "https://www.twitter.com/UseChatterly")!
                 if UIApplication.shared.canOpenURL(twUrl) {
                     UIApplication.shared.open(twUrl, options: [:], completionHandler: nil)
                 } else {
@@ -101,8 +101,8 @@ class GetInTouchSettingsViewController: UIViewController, UITableViewDataSource,
                     }
                 }
             } else if indexPath.row == 1 {
-                let twUrl = URL(string: "twitter://user?screen_name=JPEGuin")!
-                let twUrlWeb = URL(string: "https://www.twitter.com/JPEGuin")!
+                let twUrl = URL(string: "twitter://user?screen_name=NigelNNorris")!
+                let twUrlWeb = URL(string: "https://www.twitter.com/NigelNNorris")!
                 if UIApplication.shared.canOpenURL(twUrl) {
                     UIApplication.shared.open(twUrl, options: [:], completionHandler: nil)
                 } else {
@@ -118,13 +118,13 @@ class GetInTouchSettingsViewController: UIViewController, UITableViewDataSource,
             }
         } else if indexPath.section == 1 {
             if indexPath.row == 0 {
-                let z = URL(string: "https://www.thebluebird.app")!
+                let z = URL(string: "https://chatterly.me")!
 //                self.safariVC = SFSafariViewController(url: z)
 //                self.safariVC?.modalPresentationStyle = .formSheet
 //                self.present(self.safariVC!, animated: true, completion: nil)
                 UIApplication.shared.open(z)
             } else if indexPath.row == 1 {
-                let z = URL(string: "https://www.thebluebird.app")!
+                let z = URL(string: "https://chatterly.me")!
 //                self.safariVC = SFSafariViewController(url: z)
 //                self.safariVC?.modalPresentationStyle = .formSheet
 //                self.present(self.safariVC!, animated: true, completion: nil)
@@ -135,8 +135,8 @@ class GetInTouchSettingsViewController: UIViewController, UITableViewDataSource,
                 if MFMailComposeViewController.canSendMail() {
                     let mail = MFMailComposeViewController()
                     mail.mailComposeDelegate = self
-                    mail.setToRecipients(["shihab.bus@gmail.com"])
-                    mail.setSubject("Hello from Mast!")
+                    mail.setToRecipients(["feedback@chatterly.me"])
+                    mail.setSubject("Feedback from Chatterly Mobile!")
                     self.present(mail, animated: true)
                 } else {
                     // show failure alert

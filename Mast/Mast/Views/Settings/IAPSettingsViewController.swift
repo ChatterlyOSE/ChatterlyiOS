@@ -34,9 +34,9 @@ class IAPSettingsViewController: UIViewController, UITableViewDataSource, UITabl
     var lifetimeProduct : SKProduct?
     var annualProduct : SKProduct?
     var monthlyProduct : SKProduct?
-    var price1 = "---"
-    var price2 = "---"
-    var price3 = "---"
+    var price1 = "1.99"
+    var price2 = "9.99"
+    var price3 = "19.99"
     
     var shouldShowX: Bool = false
     
